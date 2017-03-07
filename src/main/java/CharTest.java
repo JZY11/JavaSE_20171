@@ -4,12 +4,12 @@
 public class CharTest {
     public static void main(String[] args) {
         char c1=123;
-        System.out.println(c1);
+        System.out.println((int)c1);//(int)强制类型转换
 
         char c2='a';
         System.out.println(c2);
         char c3='\123';//八进制0~7
-        System.out.println(c3);
+        System.out.println((int)c3);
         char c4='\u4e00';//十六进制:0-9 A-F [4E00,9FBB]
         System.out.println(c4);
 
