@@ -13,5 +13,6 @@ public class PrimitiveDataType {
         long f4= 10000000000L;
         float f1=1.1f;
         double g1=1.2;
+        System.out.println("PrimitiveDate");
     }
 }
