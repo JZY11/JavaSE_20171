@@ -7,7 +7,7 @@ public class StringTest {
 //        String s2= new String(original:"abcd")
         String s3="abcd...";
         String S4=null;//空
-        System.out.println(s1);
+        System.out.println(s1);//双引号
 
     }
 }
