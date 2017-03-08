@@ -24,8 +24,8 @@ public class ArithmeticOperators {
 //        System.out.println(i++/i--);//输出结果为2   i++   ++i
 //        System.out.println(i);
 
-        int m = 1;
-        int n = -20;
+        int m = 5;
+        int n = 7;
         System.out.println(m % n);//求余   只于被除数的符号相同
     }
 

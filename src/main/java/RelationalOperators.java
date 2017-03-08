@@ -10,5 +10,8 @@ public class RelationalOperators {
 //        String s1 = "hi";
 //        String s2 = "hello/hi";
 //        System.out.println(s1==s2);
+
+        //关系运算符：
+        //（1）:>  (2)：<  (3):>=   (4):<=   != 判断是否不相同
     }
 }

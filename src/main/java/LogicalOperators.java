@@ -18,6 +18,8 @@ public class LogicalOperators {
         boolean c= (a > b)&&(b++<=a);
         System.out.println(c);
         System.out.println(b);//条件与的两种情况
+        //布尔运算符（LogicalOperators)
+        //(1)&：逻辑与  （2）|：逻辑或   （3）^:异与  （4）!:非   （5）&&:条件与  （6）||:条件或
 
     }
 }
