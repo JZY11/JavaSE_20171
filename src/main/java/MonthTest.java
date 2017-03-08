@@ -19,5 +19,7 @@ public class MonthTest {
         else{
             System.out.println("此份不存在");
         }
+//        if(x > 12 || x<1){
+//            System.out.println("该月份不存在");
+        }
     }
-}
