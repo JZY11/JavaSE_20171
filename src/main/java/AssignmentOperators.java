@@ -11,7 +11,7 @@ public class AssignmentOperators {
         i %= 5;
         boolean b = true;
         b &=false;//b=b & false
-        i &= 1;//Bitwise(位) &   i = i & 1
+        i &= 1;//Bitwise(位)   位运算与         &   i = i & 1
 
         System.out.println("i");
     }
