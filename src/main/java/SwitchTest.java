@@ -32,5 +32,8 @@ public class SwitchTest {
                 System.out.println(x + "冬季");
                 break;
         }
+//        default:
+//        System.out.println("月份不存在");
+//        break;
     }
 }

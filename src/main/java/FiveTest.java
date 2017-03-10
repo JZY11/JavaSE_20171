@@ -3,7 +3,7 @@
  */
 public class FiveTest {
     public static void main(String[] args) {
-        int x = 95;
+        int x = 78;
         if (x >= 90) {
             System.out.println("A");
         }
