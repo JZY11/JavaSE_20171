@@ -6,6 +6,10 @@ import java.util.Scanner;
  * Created by Tony.Jaa on 2017/3/10.
  */
 public class PracticeTest {
+    public PracticeTest() {
+        super();
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
@@ -20,15 +24,19 @@ public class PracticeTest {
             case "C":
                 System.out.println("[60,80)");
                 break;
-            case "D": {
+            case "D":
                 System.out.println("[0,60)");
                 break;
+            default:
+                System.out.println("不满足条件");
+                break;
+
             }
 
         }
     }
 
 
-}
+
 
 
