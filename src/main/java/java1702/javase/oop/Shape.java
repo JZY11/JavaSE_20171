@@ -1,5 +1,7 @@
 package java1702.javase.oop;
 
+import java.net.SocketTimeoutException;
+
 /**
  * Created by zhenya.1291813139.com
  * on 2017/3/21.
@@ -18,6 +20,12 @@ public abstract class Shape {
         System.out.println(circle.getPerimeter());
         Quadrangle quadrangle = new Quadrangle(3, 5, 7, 15);
         System.out.println(quadrangle.getPerimeter());
+        Square square = new Square(123);
+        System.out.println(square.getPerimeter());
+        System.out.println(square.getArea());
+        Rectngle rectngle = new Rectngle(1.2, 3.4);
+        System.out.println(rectngle.getArea());
+        System.out.println(rectngle.getPerimeter());
     }
 }
 class Circle extends Shape{
@@ -90,5 +98,41 @@ class Quadrangle extends Shape {
     @Override
     public double getArea() {
         return 0;
+    }
+}
+class Square extends Shape{
+    private double length;
+
+    public Square(double length) {
+        this.length = length;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return length * 4;
+    }
+
+    @Override
+    public double getArea() {
+        return length * length;
+    }
+}
+class Rectngle extends Shape{
+    private double width;
+    private double height;
+
+    public Rectngle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return (height + width) / 2;
+    }
+
+    @Override
+    public double getArea() {
+        return height * width;
     }
 }
