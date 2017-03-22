@@ -17,7 +17,8 @@ public abstract class Shape {
         System.out.println(triangle.getArea());
         Circle circle = new Circle(5.0);
         System.out.println(circle.getArea());//因有返回类型double  若为void型则可circle.getArea就不需要return,直接控制输出
-        System.out.println(circle.getPerimeter());
+//        circle.getPerimeter();//本身没错但没有任何输出因为没有输出语直接返回了一个值，也可写输出值System.out.println(2 * pai * radis 但没有必要（返回的值接受了却没有用到它）
+        System.out.println(circle.getPerimeter());//控制台输出对象调用方法它的一个返回结果这样一个值
         Quadrangle quadrangle = new Quadrangle(3, 5, 7, 15);
         System.out.println(quadrangle.getPerimeter());
         Square square = new Square(123);

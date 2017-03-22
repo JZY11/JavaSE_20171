@@ -28,7 +28,7 @@ class SubAbstrctTest extends AbstractTest{
     }
 
     @Override
-    public void method2() {//重写
+    public void method2() {//不是抽象方法而是具体方法  次为对父类对象的重写或覆盖  左边图案的颜色都不一样
         super.method2();
     }
 }
