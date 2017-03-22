@@ -78,18 +78,22 @@ class Triangle extends Shape{
         return s * Math.sqrt((s - a) * (s - b) * (s - c));
     }
 }
-class Quadrangle extends Shape {
+class Quadrangle extends Shape{
     private double a;
     private double b;
     private double c;
     private double d;
 
-    public Quadrangle(double a, double b, double c, double d) {
+    public Quadrangle(double a, double b, double c, double d) {//先对四边形进行判断
+    if((a + b + c > d) && (b + c + d > a) && (c + d + a > b) && (d + a + b > c)){
+
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
     }
+    }
+
 
     @Override
     public double getPerimeter() {
