@@ -7,6 +7,9 @@ import java.net.SocketTimeoutException;
  * on 2017/3/21.
  * JavaSE_20171.
  */
+/*
+* 抽象类改成接口  子类改成实现类
+ */
 public abstract class Shape {
     public abstract double getPerimeter();
     public abstract double getArea();

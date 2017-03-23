@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 /*
 *  猜数字游戏，用户不停的猜，直到猜对了为止  （递归调用）
-*  AI
+*  AI(人工智能)
  */
 public class EE1 {
     private static int x;
