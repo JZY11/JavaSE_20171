@@ -48,7 +48,7 @@ public class User {
         user.getGender();
         user.setGender("women");
         System.out.println(user.getGender());
-        System.out.println(user.setGender("women"));
+//        System.out.println(user.setGender("women"));
     }
 
 

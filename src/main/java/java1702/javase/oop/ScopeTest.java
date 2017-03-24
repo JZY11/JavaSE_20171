@@ -11,8 +11,8 @@ package java1702.javase.oop;
  */
 public class ScopeTest {//类作用的范围   类的域和方法
     public void method(){
-        i = 0;
-        int j = 1;//在方法内  被称为局部变量
+        i = 0;//方法中引用了i;
+        int j = 1;//在方法内  被称为局部变量local variable
         System.out.println(j);
         for (int k = 0; k < 10; k++) {
             j = 2;
