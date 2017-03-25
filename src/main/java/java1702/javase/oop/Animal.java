@@ -45,4 +45,15 @@ class Cat extends Animal{
         super.cry();
     }
 }
+class Cat1 implements Flying,Swiming{
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void swim() {
+
+    }
+}
 
