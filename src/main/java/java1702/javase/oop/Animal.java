@@ -20,3 +20,29 @@ public class Animal {
 
     }
 }
+class Cat extends Animal{
+    private double weight;
+    private int type;
+    public void eatFish(){
+
+    }
+    public void catchMouse(){
+
+    }
+
+    @Override
+    public void eat() {
+        super.eat();
+    }
+
+    @Override
+    public void sleep() {
+        super.sleep();
+    }
+
+    @Override
+    public void cry() {
+        super.cry();
+    }
+}
+
