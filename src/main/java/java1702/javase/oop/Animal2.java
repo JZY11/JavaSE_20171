@@ -5,18 +5,18 @@ package java1702.javase.oop;
  * on 2017/3/25.
  * JavaSE_20171.
  */
-public class Animal {
+public class Animal2 {
     public static void main(String[] args) {
 
     }
-    private String name;
-    private boolean eatMeat;
-    private int age;
-    public void eat(){
+}
+class Cat extends Animal2{
+    private double weight;
+    private int type;
+    public void eatFish(){
+
     }
-    public void sleep(){
-    }
-    public void cry(){
+    public void catchMouse(){
 
     }
 }
