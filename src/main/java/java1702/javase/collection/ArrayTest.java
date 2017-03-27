@@ -12,6 +12,7 @@ public class ArrayTest {
         System.out.println(strings[0]);//下标 索引 index
 
         boolean[] booleans = new boolean[100];
+        booleans[0] = false;
         System.out.println(booleans[1]);
 
        // int[] ints = new int[10000];
