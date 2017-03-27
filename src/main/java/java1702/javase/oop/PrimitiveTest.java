@@ -6,16 +6,17 @@ package java1702.javase.oop;
  * JavaSE_20171.
  */
 public class PrimitiveTest {
-    public static void method(boolean b){
-        System.out.println("b:" + b);
-        b = false;
-        System.out.println("c:" + b);
+    public static void method(String s){
+        System.out.println("b:" + s);
+         s = "hi";
+        System.out.println("c:" + s);
     }
+    //String(引用数据类型)为特殊的类可理解为与基本数据类型相同的值传递
 
     public static void main(String[] args) {
-        boolean b = true;
-        System.out.println("a:" + b);
-        method(b);
-        System.out.println("d:" + b);
+        String s = "hello";
+        System.out.println("a:" + s);
+        method(s);
+        System.out.println("d:" + s);
     }
 }
