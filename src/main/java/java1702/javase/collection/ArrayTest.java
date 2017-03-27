@@ -14,8 +14,11 @@ public class ArrayTest {
         boolean[] booleans = new boolean[100];
         System.out.println(booleans[1]);
 
-        int[] ints = new int[10000];
-        System.out.println(ints[9999]);
+       // int[] ints = new int[10000];
+        // System.out.println(ints[9999]);
+
+        int[] ints = {1, 2, 3, 4, 5 , 4659,182};
+        System.out.println(ints[6]);
 
         double[] doubles = new double[10000];
         System.out.println(doubles[9999]);
