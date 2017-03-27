@@ -12,7 +12,7 @@ public class PrimitiveTest {
         System.out.println("c:" + s);
     }
     //String(引用数据类型)为特殊的类可理解为与基本数据类型相同的值传递
-
+    //String类型以及基本数据类型的封装类是特例（还是值传递）
     public static void main(String[] args) {
         String s = "hello";
         System.out.println("a:" + s);

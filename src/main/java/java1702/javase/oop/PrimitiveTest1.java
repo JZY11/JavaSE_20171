@@ -12,6 +12,7 @@ public class PrimitiveTest1 {
         primitiveTest1 .s = "hi";
         System.out.println("c:" + primitiveTest1.s);
     }
+    //引用数据类型(类)方法中的改变会影响实际参数
 
     public static void main(String[] args) {
         PrimitiveTest1 primitiveTest1 = new PrimitiveTest1();
