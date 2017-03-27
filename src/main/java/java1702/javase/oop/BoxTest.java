@@ -11,11 +11,14 @@ package java1702.javase.oop;
 public class BoxTest {
     public static void main(String[] args) {
         Integer i = 0;
+        //Integer integer = new Integer()
+        //integer i = 0;
       //  Boolean b = true;
         Double b = 1.2d;
         System.out.println(i);
         System.out.println(b);
     }
+    //stackoverflow.com
 
 }
  /*
