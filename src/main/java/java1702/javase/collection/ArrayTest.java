@@ -21,8 +21,17 @@ public class ArrayTest {
         int[] ints = {1, 2, 3, 4, 5 , 4659,182};
         System.out.println(ints[6]);
 
-        double[] doubles = new double[10000];
-        System.out.println(doubles[9999]);
+        double[] doubles = new double[100];
+        for (int i = 0; i < doubles.length; i++) {
+            doubles[i] = i + 1;
+        }
+           // System.out.println(doubles.length - 1);
+        System.out.println(doubles.length);
+
+        for (int i = 0; i < doubles.length; i++) {
+            System.out.println(doubles[i]);
+        }
+        //  System.out.println(doubles[9999]);
         System.out.println(doubles.length);//输出数组的长度
 
         ArrayTest[] arrayTests = {new ArrayTest(), new ArrayTest(), new ArrayTest()};
