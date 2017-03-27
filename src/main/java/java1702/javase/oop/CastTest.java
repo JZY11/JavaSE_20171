@@ -5,6 +5,7 @@ package java1702.javase.oop;
  * on 2017/3/27.
  * JavaSE_20171.
  */
+//       整型与字符串的相互转换
 public class CastTest {
     public static void main(String[] args) {
         int x = 1;
@@ -23,9 +24,19 @@ public class CastTest {
         System.out.println(s3);
 
         //(d)
-        String s4 = integer.toString(x);
+        String s4 = Integer.toString(x);
+        System.out.println(s4);
+
+
+        String string = "123";
 
         //(1)
+        int y1 = Integer.valueOf(string);
+        System.out.println(y1);
+
+        //(2)
+        int y2 = Integer.parseInt(string);//parse 解析
+        System.out.println(y2);
 
     }
 }
