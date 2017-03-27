@@ -38,5 +38,9 @@ public class CastTest {
         int y2 = Integer.parseInt(string);//parse 解析
         System.out.println(y2);
 
+        //(3)
+        int y3 = new Integer(string);//构造方法
+        System.out.println(y3);
+
     }
 }
