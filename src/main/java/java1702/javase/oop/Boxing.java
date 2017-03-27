@@ -7,12 +7,13 @@ package java1702.javase.oop;
  */
 public class Boxing {
     public static void main(String[] args) {
-        Long sum = 0L;
+        Long sum = 0L;//基本类型的封装类
+        // long sum = 0L;  基本数据类型
         long start = System.currentTimeMillis();
         for (int i = 0; i < Integer.MAX_VALUE; i++) {
             sum += i;
         }
-        System.out.println("total time:" + (System.currentTimeMillis() - start)/1000);
+        System.out.println("time:" + (System.currentTimeMillis() - start)/1000 + "s");
         System.out.println("sum:" + sum);
     }
 }
