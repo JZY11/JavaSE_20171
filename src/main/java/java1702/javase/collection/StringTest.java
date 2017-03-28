@@ -29,9 +29,16 @@ public class StringTest {
 
         String s4 = "итальитальянскийитальянскийитальянскийитальянскийитальянскийянскийa";
         System.out.println(s4.charAt(s4.length() - 1));
+    }
+    private static String toLowerCase(String origin){
+        char[] chars = origin.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            char aChar = chars[i];
+            if (aChar >= 'A' && aChar <= 'Z') {
+                chars[i] += 32; //a - A = 32
+            }
 
-
-
-
+        }
+        return new String(chars);
     }
 }
