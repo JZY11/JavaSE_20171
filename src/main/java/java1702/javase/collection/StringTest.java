@@ -41,4 +41,14 @@ public class StringTest {
         }
         return new String(chars);
     }
+    private static String toUpperCase(String origin) {
+        char[] chars = origin.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            char aChar = chars[i];
+            if (aChar >= 'a' && aChar <= 'z') {
+                chars[i] -= 32; // a - A = 32
+            }
+        }
+        return new String(chars);
+    }
 }
