@@ -39,6 +39,7 @@ public class StringTest {
             }
 
         }
+//        String s = new String(chars);
         return new String(chars);
     }
     private static String toUpperCase(String origin) {
