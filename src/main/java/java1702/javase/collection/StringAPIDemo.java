@@ -57,4 +57,18 @@ class StringAPIDemo4{
 
                }
 }
+             //(6)去掉左右空格
+class StringAPIDemo5{
+    public static void main(String[] args) {
+        String str1 = "     hello    ";
+        System.out.println(str1.trim());//去掉左右空格后输出
+    }
+}
+class StringAPIDemo6{
+    public static void main(String[] args) {
+        String str1 = "hello world";
+        System.out.println(str1.substring(6));
+        System.out.println(str1.substring(0, 5));
+    }
+}
 
