@@ -15,7 +15,7 @@ public class _2DArray {
             }
             System.out.println();
         }
-        /*    不规则的二维数组
+        /*    不规则的二维数组  注意每行列数不同的二维数组
         1, 2, 3, 4, 5,
         1
         1, 2, 3
