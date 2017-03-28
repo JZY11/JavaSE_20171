@@ -64,11 +64,33 @@ class StringAPIDemo5{
         System.out.println(str1.trim());//去掉左右空格后输出
     }
 }
+             //(7)字符串截取
 class StringAPIDemo6{
     public static void main(String[] args) {
         String str1 = "hello world";
-        System.out.println(str1.substring(6));
-        System.out.println(str1.substring(0, 5));
+        System.out.println(str1.substring(6));//从第7个位置开始截取
+        System.out.println(str1.substring(0, 5));//截取0-5个位置的内容
+    }
+}
+             //(8)按照指定的字符串拆分字符串
+class StringAPIDemo7{
+    public static void main(String[] args) {
+        String str1 = "hello world";
+        String[] s = str1.split("");//按空格进行字符串的拆分
+        for (int i = 0; i < s.length; i++) {//循环输出
+            String s1 = s[i];
+            System.out.println(s[i]);
+
+        }
+    }
+}
+             //(9)字符串的大小写转换
+class StringAPIDemo8{
+    public static void main(String[] args) {
+//        String str1 = "hello world";
+//        System.out.println(str1.toUpperCase());
+        System.out.println("hello world".toUpperCase());
+        System.out.println("HELLO WORLD".toLowerCase());
     }
 }
 
