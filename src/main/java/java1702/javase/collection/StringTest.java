@@ -14,7 +14,10 @@ public class StringTest {
         System.out.println(s2);
 
         for (char c : s2.toCharArray()) {
-            System.out.print(c + "\t");
+        //    System.out.print(c + "\t");
         }
+        String s3 = "Hello";
+        System.out.println(s3.toLowerCase());
+        System.out.println(s3.toUpperCase());
     }
 }
