@@ -30,3 +30,12 @@ class StringAPIDemo1{
         System.out.println(str1.charAt(3));//取出字符串中第四个字符
     }
 }
+class StringAPIDemo2{
+    public static void main(String[] args) {
+        String str1 = "hello";
+        byte[] b = str1.getBytes();//将字符串变为byte数组
+        System.out.println(b);
+        System.out.println(new String(b));//将全部byte数组变为字符串
+        System.out.println(new String(b, 1, 3));//将部分byte数组变为字符串
+    }
+}
