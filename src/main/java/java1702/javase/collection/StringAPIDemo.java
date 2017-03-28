@@ -30,6 +30,7 @@ class StringAPIDemo1{
         System.out.println(str1.charAt(3));//取出字符串中第四个字符
     }
 }
+          //(3)字符串与byte数组的转换
 class StringAPIDemo2{
     public static void main(String[] args) {
         String str1 = "hello";
@@ -39,3 +40,11 @@ class StringAPIDemo2{
         System.out.println(new String(b, 1, 3));//将部分byte数组变为字符串
     }
 }
+           //(4)取得一个字符串的长度
+class StringAPIDemo3{
+    public static void main(String[] args) {
+        String str1 = "hello LiXingHua";
+        System.out.println(str1.length());
+    }
+}
+
