@@ -12,7 +12,7 @@ public class StringAPIDemo {
         // (1)字符串与字符数组的转换
         String str = "hello";//定义字符串
         char[] c = str.toCharArray(); //将字符串变为字符数组
-        for (int i = 0; i < c.length; i++) {// 循环输出
+        for (int i = 0; i < 10; i++) {// 循环输出
             char c1 = c[i];//  ???
             System.out.print(c[i] + "\t");
         }
@@ -91,6 +91,13 @@ class StringAPIDemo8{
 //        System.out.println(str1.toUpperCase());
         System.out.println("hello world".toUpperCase());
         System.out.println("HELLO WORLD".toLowerCase());
+    }
+}
+class StringAPIDemo9{
+    public static void main(String[] args) {
+        String str1 = "hello";
+        String newStr = str1.replaceAll("l", "x");
+        System.out.println(str1.replaceAll("l", "x"));
     }
 }
 
