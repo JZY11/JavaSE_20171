@@ -19,6 +19,7 @@ public class StringVsStringBufferTest {
         }
         System.out.println("time:" + (System.currentTimeMillis() - start));
 //        System.out.println(s.length());
+
         System.out.println(stringBuffer.length());
     }
 }
