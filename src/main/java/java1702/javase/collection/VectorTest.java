@@ -9,6 +9,7 @@ import java.util.Vector;
  * on 2017/3/29.
  * JavaSE_20171.
  */
+//    Vector(向量)/ add get iter size capacity setElementAt set remove clear
 public class VectorTest {
     public static void main(String[] args) {
         Vector<String> strings = new Vector<>();
