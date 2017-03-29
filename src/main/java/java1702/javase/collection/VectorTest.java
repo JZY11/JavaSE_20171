@@ -31,6 +31,10 @@ public class VectorTest {
         integers.add(100);
         System.out.println(integers.size());
         System.out.println(integers.capacity());
+        for (Integer integer : integers) {
+            System.out.println(integer);
+        }
+        integers.setElementAt(9,0);
 
 
         Set<String> strings1 = new HashSet<>();
