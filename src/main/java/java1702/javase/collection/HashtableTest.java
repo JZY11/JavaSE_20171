@@ -1,13 +1,14 @@
 package java1702.javase.collection;
 
 import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * Created by zhenya.1291813139.com
  * on 2017/3/29.
  * JavaSE_20171.
  */
-//       put get size keySet values entrySet remove put
+//       put get size iter keySet values entrySet remove put
 public class HashtableTest {
     public static void main(String[] args) {
         Hashtable<Integer,String> hashtable = new Hashtable<>();
@@ -25,6 +26,9 @@ public class HashtableTest {
         }
         for (String s : hashtable.values()) {
             System.out.println(s);
+        }
+        for (Map.Entry<Integer, String> integerStringEntry : hashtable.entrySet()) {
+            System.out.println(integerStringEntry.getKey() + "-->" + integerStringEntry.getValue());
         }
 
 
