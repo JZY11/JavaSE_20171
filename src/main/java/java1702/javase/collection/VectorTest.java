@@ -1,5 +1,7 @@
 package java1702.javase.collection;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Vector;
 
 /**
@@ -22,5 +24,12 @@ public class VectorTest {
         }
         System.out.println(vector.size());
         System.out.println(vector.capacity());
+
+        Set<String> strings = new HashSet<>();
+        strings.add("a");
+        strings.add("aa");
+        strings.add("aaa");
+        strings.add("aaa");
+        System.out.println(strings.size());
     }
 }
