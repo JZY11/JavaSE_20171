@@ -23,6 +23,7 @@ public class VectorTest {
         }
         System.out.println(strings.size());
         System.out.println(strings.capacity());
+        System.out.println("---------------------");
 
 
         Vector<Integer> integers = new Vector<>();
@@ -31,10 +32,15 @@ public class VectorTest {
         integers.add(100);
         System.out.println(integers.size());
         System.out.println(integers.capacity());
+        integers.setElementAt(9,0);
+        integers.setElementAt(99,1);
+        System.out.println("->" + integers.set(2, 999));
+        integers.remove(0);
+        integers.clear();
         for (Integer integer : integers) {
             System.out.println(integer);
         }
-        integers.setElementAt(9,0);
+        System.out.println("---------------------");
 
 
         Set<String> strings1 = new HashSet<>();
