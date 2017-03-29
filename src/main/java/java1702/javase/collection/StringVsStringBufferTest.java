@@ -8,7 +8,7 @@ import com.sun.javafx.image.impl.IntArgb;
  * JavaSE_20171.
  */
 public class StringVsStringBufferTest {
-    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";//定义一个常量
     public static void main(String[] args) {
         String s = "";
         StringBuffer stringBuffer = new StringBuffer("");
