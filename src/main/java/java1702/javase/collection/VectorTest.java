@@ -1,7 +1,5 @@
 package java1702.javase.collection;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Vector;
@@ -13,35 +11,34 @@ import java.util.Vector;
  */
 public class VectorTest {
     public static void main(String[] args) {
-        Vector<String> vector = new Vector<>();//JD5   容器内放入的为字符串类型，也可该为其他数据类型
-
-        vector.add("hi");
-        vector.add("hello");
-        vector.add("test");
-        vector.add("hi");
-//        System.out.println(vector.get(0));//取某一个索引对应的值
-        System.out.println(vector.size());
-        for (String s : vector) {
-            System.out.println(s);
+        Vector<String> strings = new Vector<>();
+        strings.add("hi");
+        strings.add("hello");
+        strings.add("test");
+        strings.add("hi");
+//        System.out.println(strings.get(0));
+        System.out.println(strings.size());
+        for (String string : strings) {
+            System.out.println(string);
         }
-        System.out.println(vector.size());
-        System.out.println(vector.capacity());
+        System.out.println(strings.size());
+        System.out.println(strings.capacity());
+
 
         Vector<Integer> integers = new Vector<>();
         integers.add(1);
         integers.add(10);
         integers.add(100);
         System.out.println(integers.size());
-        System.out.println(integers.capacity());
-        for (Integer integer : integers) {
-            System.out.println(integer);
-        }
 
-        Set<String> strings = new HashSet<>();
-        strings.add("a");
-        strings.add("aa");
-        strings.add("aaa");
-        strings.add("aaa");
-        System.out.println(strings.size());
+
+        Set<String> strings1 = new HashSet<>();
+        strings1.add("a");
+        strings1.add("aa");
+        strings1.add("aaa");
+        System.out.println(strings1.size());
+        for (String s : strings1) {
+            System.out.println(s);
+        }
     }
 }
