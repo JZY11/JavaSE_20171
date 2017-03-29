@@ -31,13 +31,14 @@ public class VectorTest {
         integers.add(1);
         integers.add(10);
         integers.add(100);
-        System.out.println(integers.size());
-        System.out.println(integers.capacity());
+//        System.out.println(integers.size());
+//        System.out.println(integers.capacity());
         integers.setElementAt(9,0);
         integers.setElementAt(99,1);
-        System.out.println("->" + integers.set(2, 999));
-        integers.remove(0);
-        integers.clear();
+        integers.setElementAt(999,2);
+//        System.out.println("->" + integers.set(2, 999));
+//        integers.remove(0);
+//        integers.clear();
         for (Integer integer : integers) {
             System.out.println(integer);
         }
