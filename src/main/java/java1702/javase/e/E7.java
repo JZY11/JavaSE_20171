@@ -12,14 +12,14 @@ public class E7 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("input string:");
-        String string = scanner.nextLine();//读取一行
+        String string = scanner.nextLine();//读取这一行字符
 
         char[] chars = string.toCharArray();//字符串转换为字符数组
         int english = 0;
         int space = 0;
         int digit = 0;
         int special = 0;
-        for (char aChar : chars) {
+        for (char aChar : chars) { //for each循环做个遍历
             if ((aChar >= 'A' && aChar <= 'Z') ||(aChar >= 'a' && aChar <= 'z')) {
                 english++;
             } else if (aChar == ' '){
