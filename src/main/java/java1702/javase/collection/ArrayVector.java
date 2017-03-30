@@ -19,6 +19,7 @@ public class ArrayVector {
         System.out.println(integers.capacity());
 
         //  2. remove
+
         integers.remove(1);//***
         System.out.println(integers.size());
         System.out.println(integers.get(1));
