@@ -36,3 +36,13 @@ public class Student {
         this.hobby = hobby;
     }
 }
+class StudentTest{
+    public static void main(String[] args) {
+        //生成一个学生数组
+        Student[] stu = new Student[2];
+        Student xixi = new Student(); // 实例化学生对象xixi
+        xixi.setName("xixi");
+        xixi.setStuNo(18);
+        xixi.setHobby("我的爱好是音乐");
+    }
+}
