@@ -17,6 +17,8 @@ import java.util.Arrays;
  */
 public class E33 {
     public static void main(String[] args) {
+        // Arrays是一个类，有一个静态的toString方法(转化为字符串)
+        System.out.println(Arrays.toString(getArray(5)));
 //        int[] array1 = {1};
 //        int[] array2 = {1,1};
 //        int[] array3 = {1, 2, 1};
@@ -31,10 +33,31 @@ public class E33 {
 //                array5[i] = array4[i - 1] + array4[i];
 //            }
 //        }
-        System.out.println(Arrays.toString(getArray(5)));
+//        System.out.println(Arrays.toString(getArray(5)));
+    }
+    /**
+     *
+     * @param n  表示的是第几行
+     * @return   第几行的数组
+     */
+
+//        int[] ints = new int[1];
+//        return ints;  返回  数组名/对象
+    private static int[] getArray(int n){//  递归
+        if ((n == 1)) {
+            return new int[]{1};
+        } else {
+            int[] array = new int[n];
+            for (int i = 0; i < array.length; i++) {
+                if (i == 0 || i == array.length - 1) {
+                    array[i] = 1;
+                } else {
+                    array[i] = getArray(n - 1)[i - 1] + getArray(n - 1)[i];
+                }
+            }
+            return array;
+
+        }
     }
 
-    private static int[] getArray(int n){
-        return new int[]{1};
-    }
 }
