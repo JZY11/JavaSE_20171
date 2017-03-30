@@ -44,5 +44,17 @@ class StudentTest{
         xixi.setName("xixi");
         xixi.setStuNo(18);
         xixi.setHobby("我的爱好是音乐");
+
+        Student dada = new Student();//实例化学生对象dada
+        dada.setName("dada");
+        dada.setStuNo(24);
+        dada.setHobby("我的爱好是运动");
+
+
+        //将xixi和dada放入学生对象数组
+
+        stu[0] = xixi;
+        stu[1] = dada;
+
     }
 }
