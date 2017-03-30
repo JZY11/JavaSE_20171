@@ -9,7 +9,7 @@ import java.util.Vector;
  * on 2017/3/29.
  * JavaSE_20171.
  */
-//    Vector(向量)/ add get iter size capacity setElementAt set remove clear
+//    Vector(向量)/ add（增加）； get（查询任何索引处的值；） iter size(几个) ；capacity（容量）； setElementAt set（修改）； remove（按照索引删除，返回的为之前删除的元素） clear（清除）
 public class VectorTest {
     public static void main(String[] args) {
         Vector<String> strings = new Vector<>();
