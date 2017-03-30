@@ -17,7 +17,7 @@ public class ArrayE1 {
             if (score[i] > max) {//  依次判断后续元素是否比max大
                 max = score[i];//  如果大则修改max内容
             } else {
-                if (score[i] < max) {
+                if (score[i] < min) {//判断后续元素是否比min小
                     min = score[i];
                 }
             }

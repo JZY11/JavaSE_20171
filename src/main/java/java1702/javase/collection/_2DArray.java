@@ -13,7 +13,7 @@ public class _2DArray {
             for (int j = 0; j < 5; j++) {
                 System.out.print(ints[i][j] + "\t");
             }
-            System.out.println();
+            System.out.println();// 也可(" ")换行
         }
         /*    不规则的二维数组  注意每行列数不同的二维数组
         1, 2, 3, 4, 5,
@@ -49,5 +49,16 @@ public class _2DArray {
             System.out.println();
         }
 
+    }
+}
+class Array1{
+    public static void main(String[] args) {
+        int[][] score ={{67, 61}, {78, 69, 20}, {11, 20, 63, 47}};
+        for (int i = 0; i < score.length; i++) {
+            for (int j = 0; j < score[i].length; j++) {//当前行
+                System.out.print(score[i][j] + "\t");
+            }
+            System.out.println(" ");
+        }
     }
 }
