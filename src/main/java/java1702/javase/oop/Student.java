@@ -55,6 +55,10 @@ class StudentTest{
 
         stu[0] = xixi;
         stu[1] = dada;
+        for (int i = 0; i < stu.length; i++) {
+            System.out.println("大家好我是:" + stu[i].getName() + "我的学号是:" + stu[i].getStuNo() + "我的爱好是:" + stu[i].getHobby());
+
+        }
 
     }
 }
