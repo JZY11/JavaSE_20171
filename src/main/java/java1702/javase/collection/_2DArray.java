@@ -55,7 +55,7 @@ class Array1{
     public static void main(String[] args) {
         int[][] score ={{67, 61}, {78, 69, 20}, {11, 20, 63, 47}};
         for (int i = 0; i < score.length; i++) {
-            for (int j = 0; j < score[i].length; j++) {//当前行
+            for (int j = 0; j < score[i].length; j++) {//score[i]每行的长度不一样，表示当前行的长度，因为每行的列数不一样
                 System.out.print(score[i][j] + "\t");
             }
             System.out.println(" ");
