@@ -17,8 +17,18 @@ import java.util.Arrays;
  */
 public class E33 {
     public static void main(String[] args) {
+        int n = 5;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int j : getArray(i + 1)) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
         // Arrays是一个类，有一个静态的toString方法(转化为字符串)
-        System.out.println(Arrays.toString(getArray(5)));
+//        System.out.println(Arrays.toString(getArray(5)));
 //        int[] array1 = {1};
 //        int[] array2 = {1,1};
 //        int[] array3 = {1, 2, 1};
@@ -33,7 +43,7 @@ public class E33 {
 //                array5[i] = array4[i - 1] + array4[i];
 //            }
 //        }
-//        System.out.println(Arrays.toString(getArray(5)));
+//        System.out.println(Arrays.toString(getArray(5))); [.... .]为Arrays.toString方法的返回类型为字符串形式
     }
     /**
      *
