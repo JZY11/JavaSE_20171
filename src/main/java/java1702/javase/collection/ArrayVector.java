@@ -49,10 +49,31 @@ class ArrayVector1{//  使用数组来模拟一个变量   DynamicArray(动态�
         if (size == capacity) {
             String[] newStrings = new String[capacity * 2];
             capacity *= 2;
-            for (String s : strings) {
-
-            }
+            System.arraycopy(strings, 0, newStrings, 0, strings.length);
             strings = newStrings;
         }
+        strings[size] = string;
+        size++;
+    }
+    public String get(int index){
+        if (index >= size) {
+            System.out.println("error.");
+            System.exit(0);//循环终止
+        }
+        return strings[index];
+    }
+    public int size(){
+        return size;
+    }
+    public int capacity(){
+        return capacity;
+    }
+
+    public static void main(String[] args) {
+        ArrayVector1 arrayVector1 = new ArrayVector1();
+        arrayVector1.add("hello");
+        arrayVector1.add("hi");
+        System.out.println(arrayVector1.size());
+        System.out.println(arrayVector1.capacity);
     }
 }
