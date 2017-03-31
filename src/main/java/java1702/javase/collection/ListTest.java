@@ -29,10 +29,11 @@ public class ListTest extends ArrayList {
 
 
 
-        ListTest listTest = new ListTest();
+        ListTest listTest = new ListTest();//protected  void(受保护的) 需要子类实例化，再调用方法
         for (int i = 0; i < 10; i++) {
             listTest.add("" + i);
         }
+        listTest.removeRange(3, 5);
 
     }
 }
