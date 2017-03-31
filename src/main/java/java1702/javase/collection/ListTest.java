@@ -1,6 +1,7 @@
 package java1702.javase.collection;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by zhenya.1291813139.com
@@ -26,6 +27,11 @@ public class ListTest extends ArrayList {
 
         System.out.println(strings.set(1, "test"));
         System.out.println(strings.isEmpty());
+        System.out.println("-------------------");
+        Object[] objects = strings.toArray();
+        System.out.println(objects);
+        List<String> strings1 = strings.subList(1, 2);
+
 
 
 
