@@ -15,6 +15,15 @@ public class Human {
 
     //    一些构造方法(constructor)
 
+
+    public Human(String name, int age, char gender, double weight, double height) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.weight = weight;
+        this.height = height;
+    }
+
     public void eat(String foods, int amount) {
         System.out.println(name + "吃了" + amount + foods);
 
