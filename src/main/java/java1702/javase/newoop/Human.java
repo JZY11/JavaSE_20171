@@ -13,14 +13,18 @@ public class Human {
     private double height;
 
 
-    //    一些构造方法
-    public void eat(){
+    //    一些构造方法(constructor)
+
+    public void eat(String foods, int amount){
+        System.out.println(name + "吃了" + amount + foods);
 
     }
     public void sleep(){
 
     }
-    public void study(){
+    public String study(int studyTime){//call&invoke method 调用方法
+        System.out.println(name + "学习了" + studyTime + "小时。");
+        return "一份English homework";
 
     }
     public void work(){
