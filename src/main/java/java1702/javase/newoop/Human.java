@@ -46,6 +46,14 @@ public class Human {
     }
 
     public void work() {
+    }
 
+    public static void main(String[] args) {
+        Human human = new Human("Tom", 18, 'M',65, 1.7);
+        System.out.println(human.name);
+        System.out.println(human.age);
+        System.out.println(human.gender);
+        System.out.println(human.height);
+        System.out.println(human.weight);
     }
 }
