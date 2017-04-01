@@ -49,11 +49,15 @@ public class Human {
     }
 
     public static void main(String[] args) {
+        //     构造方法需要创建类的对象来调用
         Human human = new Human("Tom", 18, 'M',65, 1.7);
         System.out.println(human.name);
         System.out.println(human.age);
         System.out.println(human.gender);
         System.out.println(human.height);
         System.out.println(human.weight);
+        human.study(5);//  成员方法可以用对象直接调用
+        human.eat("西红柿", 5);
+        System.out.println(human.sleep(true));//  有返回类型int，有返回值，所以要放在控制台输出语句中
     }
 }
