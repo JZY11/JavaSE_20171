@@ -57,7 +57,9 @@ public class Human {
         System.out.println(human.height);
         System.out.println(human.weight);
         human.study(5);//  成员方法可以用对象直接调用  无返回值(void)  调用方法是要传入实参
+        System.out.println("------->");
+        System.out.println(human.study(5));
         human.eat("西红柿", 5);
-        System.out.println(human.sleep(true));//  有返回类型int，有返回值，所以要放在控制台输出语句中
+        System.out.println(human.sleep(true));//  有返回类型int，有返回值，所以要放在控制台输出语句中来接收
     }
 }
