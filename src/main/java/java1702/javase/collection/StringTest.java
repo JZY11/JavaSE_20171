@@ -37,6 +37,7 @@ public class StringTest {
         System.out.println(s4.charAt(s4.length() - 1));
         String s6 = "GoodBoy";
         System.out.println(toLowerCase(s6));//调用了toLowerCase方法
+        System.out.println(toUpperCase(s6));
     }
     private static String toLowerCase(String origin){// 接受参数为原始字符串origin或src
         char[] chars = origin.toCharArray();//先变为字符一维数组  参数调用tolowerCase方法
@@ -50,7 +51,7 @@ public class StringTest {
 //        String s = new String(chars);
         return new String(chars); //return为字符串
     }
-    private static String toUpperCase(String origin) {
+    private static String toUpperCase(String origin) {// String origin 字符串类的对象(origin)所以可以调用字符类的方法toCharArray()，参数也是类的对象
         char[] chars = origin.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             char aChar = chars[i];
