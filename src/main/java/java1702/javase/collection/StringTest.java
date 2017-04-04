@@ -17,9 +17,10 @@ public class StringTest {
         char[] chars = {'H','e', 'l', 'l', 'o'};
         String s2 = new String(chars);// (一)
         System.out.print(s2);
+        System.out.println("-----------------");
 
-        for (char c : s2.toCharArray()) {// (二)
-        //    System.out.print(c + "\t");
+        for (char c : s2.toCharArray()) {// 又变回字符数组
+            System.out.println(c + "\t");
         }
         String s3 = "Hello";
         System.out.println(s3.toLowerCase());
@@ -35,9 +36,9 @@ public class StringTest {
         String s4 = "итальитальянскийитальянскийитальянскийитальянскийитальянскийянскийa";
         System.out.println(s4.charAt(s4.length() - 1));
     }
-    private static String toLowerCase(String origin){
-        char[] chars = origin.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
+    private static String toLowerCase(String origin){// 接受参数为原始字符串origin或src
+        char[] chars = origin.toCharArray();// 参数调用tolowerCase方法
+        for (int i = 0; i < chars.length; i++) {//遍历的过程，遍历每一个字符串将大写变为小写
             char aChar = chars[i];
             if (aChar >= 'A' && aChar <= 'Z') {
                 chars[i] += 32; //a - A = 32
