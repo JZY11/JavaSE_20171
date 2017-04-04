@@ -10,7 +10,7 @@ public class Game {
     public static void main(String[] args) {
         char[][] squar = new char[10][10];//定义一十行十列的二维数组
         for (int i = 0; i < squar.length; i++) {
-            for (int j = 0; j < squar[i].length; j++) {
+            for (int j = 0; j < squar[i].length; j++) {// (int)(Math.random() * 6为强制转换为整型
                 squar[i][j] = COLORS[(int)(Math.random() * 6)];// COLORS内的内容为下标
                 System.out.print(squar[i][j] + "\t");//或者为 + " "
             }
