@@ -5,6 +5,9 @@ package java1702.javase.collection;
  * on 2017/3/28.
  * JavaSE_20171.
  */
+/*
+每次运行结果都不同的十乘十的棋盘游戏
+ */
 public class Game {
     private static  final char[] COLORS = {'A', 'B', 'C', 'D', 'E', 'F',};
     public static void main(String[] args) {
