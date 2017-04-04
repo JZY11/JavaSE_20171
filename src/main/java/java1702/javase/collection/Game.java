@@ -6,7 +6,7 @@ package java1702.javase.collection;
  * JavaSE_20171.
  */
 /*
-每次运行结果都不同的十乘十的棋盘游戏
+每次运行结果(随机生成)都不同的十乘十的棋盘游戏
  */
 public class Game {
     private static  final char[] COLORS = {'A', 'B', 'C', 'D', 'E', 'F',};

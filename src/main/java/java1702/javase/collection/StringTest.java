@@ -8,12 +8,17 @@ package java1702.javase.collection;
 public class StringTest {
     public static void main(String[] args) {
         String s = "hello";
-        String s1 = "asdf";
+        String b = null; // String为引用数据类型可直接复制为null "null"唯一字符串其内容为空
+        String s1 = "asdf";//  一直接量的方式定义
+        String a = new String();// 标准定义方式(调用无参默认构造方法)定义一个空字符串
+        System.out.println();//输出一个空字符串(" ")而不是null
+
+        //  字符数组变为字符串
         char[] chars = {'H','e', 'l', 'l', 'o'};
-        String s2 = new String(chars);
+        String s2 = new String(chars);// (一)
         System.out.println(s2);
 
-        for (char c : s2.toCharArray()) {
+        for (char c : s2.toCharArray()) {// (二)
         //    System.out.print(c + "\t");
         }
         String s3 = "Hello";
