@@ -16,7 +16,7 @@ public class StringTest {
         //  字符数组变为字符串
         char[] chars = {'H','e', 'l', 'l', 'o'};
         String s2 = new String(chars);// (一)
-        System.out.println(s2);
+        System.out.print(s2);
 
         for (char c : s2.toCharArray()) {// (二)
         //    System.out.print(c + "\t");
