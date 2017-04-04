@@ -37,10 +37,10 @@ public class StringTest {
         System.out.println(s4.charAt(s4.length() - 1));
     }
     private static String toLowerCase(String origin){// 接受参数为原始字符串origin或src
-        char[] chars = origin.toCharArray();// 参数调用tolowerCase方法
-        for (int i = 0; i < chars.length; i++) {//遍历的过程，遍历每一个字符串将大写变为小写
+        char[] chars = origin.toCharArray();//先变为字符以为数组  参数调用tolowerCase方法
+        for (int i = 0; i < chars.length; i++) {//遍历的过程，遍历每一个字符将大写变为小写
             char aChar = chars[i];
-            if (aChar >= 'A' && aChar <= 'Z') {
+            if (aChar >= 'A' && aChar <= 'Z') {// 对字符进行判断
                 chars[i] += 32; //a - A = 32
             }
 
