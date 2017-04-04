@@ -12,8 +12,9 @@ public class Game {
         for (int i = 0; i < squar.length; i++) {
             for (int j = 0; j < squar[i].length; j++) {
                 squar[i][j] = COLORS[(int)(Math.random() * 6)];// COLORS内的内容为下标
-                System.out.println(squar[i][j] + "\t");//或者为 + " "
+                System.out.print(squar[i][j] + "\t");//或者为 + " "
             }
+            System.out.println();
         }
     }
 }
