@@ -35,9 +35,11 @@ public class StringTest {
 
         String s4 = "итальитальянскийитальянскийитальянскийитальянскийитальянскийянскийa";
         System.out.println(s4.charAt(s4.length() - 1));
+        String s6 = "GoodBoy";
+        System.out.println(toLowerCase(s6));//调用了toLowerCase方法
     }
     private static String toLowerCase(String origin){// 接受参数为原始字符串origin或src
-        char[] chars = origin.toCharArray();//先变为字符以为数组  参数调用tolowerCase方法
+        char[] chars = origin.toCharArray();//先变为字符一维数组  参数调用tolowerCase方法
         for (int i = 0; i < chars.length; i++) {//遍历的过程，遍历每一个字符将大写变为小写
             char aChar = chars[i];
             if (aChar >= 'A' && aChar <= 'Z') {// 对字符进行判断
@@ -46,7 +48,7 @@ public class StringTest {
 
         }
 //        String s = new String(chars);
-        return new String(chars);
+        return new String(chars); //return为字符串
     }
     private static String toUpperCase(String origin) {
         char[] chars = origin.toCharArray();
@@ -56,6 +58,6 @@ public class StringTest {
                 chars[i] -= 32; // a - A = 32
             }
         }
-        return new String(chars);
+        return new String(chars);// 将字符数组再次转换为字符串
     }
 }
