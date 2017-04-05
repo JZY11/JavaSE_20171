@@ -24,3 +24,16 @@ public class ArrayListDemo {
         System.out.println(allList);
     }
 }
+class ArrayListDemo1{
+    public static void main(String[] args) {
+        List<String> allList = new ArrayList<>();
+        Collection<String> allCollection = new ArrayList<>();
+        allList.add("Hello");
+        allList.add(0, "World");
+        allList.add("MLDN");
+        allList.add("www.mldn.cn");
+        allList.remove(0);
+        allList.remove("Hello");
+        System.out.println(allList);
+    }
+}
