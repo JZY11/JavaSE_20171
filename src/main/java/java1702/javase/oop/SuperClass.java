@@ -39,5 +39,7 @@ class Test{
         SubClass subClass = new SubClass();
         System.out.println(subClass.i);
         System.out.println(subClass.getB());
+        subClass.method();
+        subClass.m();
     }
 }
