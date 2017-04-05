@@ -24,6 +24,7 @@ public class ArrayListDemo {
         System.out.println(allList);
     }
 }
+       //(二)： 删除对象示例
 class ArrayListDemo1{
     public static void main(String[] args) {
         List<String> allList = new ArrayList<>();
@@ -32,8 +33,22 @@ class ArrayListDemo1{
         allList.add(0, "World");
         allList.add("MLDN");
         allList.add("www.mldn.cn");
-        allList.remove(0);
-        allList.remove("Hello");
+//        allList.remove(0);
+//        allList.remove("Hello");
         System.out.println(allList);
+    }
+}
+class ArrayListDemo2{
+    public static void main(String[] args) {
+        List<String> allList = new ArrayList<>();
+        allList.add("Hello");
+        allList.add("Hello");// list中的内容可重复
+        allList.add(0, "World");
+        allList.add("MLDN");
+        allList.add("www.mldn.cn");
+        System.out.print("由前向后输出：");// 信息输出
+        for (int i = 0; i < allList.size(); i++) {
+            System.out.print(allList.get(i) + " 、");
+        }
     }
 }
