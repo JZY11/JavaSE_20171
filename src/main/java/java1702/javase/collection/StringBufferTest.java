@@ -9,9 +9,10 @@ public class StringBufferTest {
     public static void main(String[] args) {
         StringBuffer buf = new StringBuffer(); //声明StringBuffer对象
         buf.append("Hello");
-        buf.insert(0, "Hey");
+//        buf.insert(0, "Hey");
         buf.append("World!!!");
         buf.replace(6, 11, "Sorry");
+        buf.delete(0, 5);
         String str = buf.reverse().toString();
         fun(buf);         //   传递StringBuffer引用
         System.out.println(buf);
