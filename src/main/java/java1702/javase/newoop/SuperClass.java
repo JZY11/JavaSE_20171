@@ -1,4 +1,4 @@
-package java1702.javase.oop;
+package java1702.javase.newoop;
 
 /**
  * Created by zhenya.1291813139.com
