@@ -57,6 +57,7 @@ class ArrayListDemo2{
         }
     }//   在List集合中数据增加的顺序就是输出后的顺序
 }
+      //(四)将集合变为对象数组
 class ArrayListDemo3{
     public static void main(String[] args) {
         List<String> allList = new ArrayList<>();
@@ -77,6 +78,7 @@ class ArrayListDemo3{
         }
     }
 }
+     //(五)测试其他操作
 class ArrayListDemo4{
     public static void main(String[] args) {
         List<String> allList = new ArrayList<>();
