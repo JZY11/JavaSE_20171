@@ -11,6 +11,7 @@ public class StringBufferTest {
         buf.append("Hello");
         buf.insert(0, "Hey");
         buf.append("World!!!");
+        buf.replace(6, 11, "Sorry");
         String str = buf.reverse().toString();
         fun(buf);         //   传递StringBuffer引用
         System.out.println(buf);
