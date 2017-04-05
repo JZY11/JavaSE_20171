@@ -19,4 +19,25 @@ public class SuperClass {
 }
 class SubClass extends SuperClass{
     private boolean b;
+    public SubClass (){
+        //super();
+        System.out.println("in sub class constructor...");
+    }
+    public void m(){
+        System.out.println("m...");
+    }
+    public boolean getB(){
+        return b;
+    }
+}
+class Test{
+    public static void main(String[] args) {
+        SuperClass supClass = new SuperClass();
+        System.out.println(supClass.i);
+        supClass.method();
+
+        SubClass subClass = new SubClass();
+        System.out.println(subClass.i);
+        System.out.println(subClass.getB());
+    }
 }
