@@ -85,5 +85,8 @@ class ArrayListDemo4{
         allList.add(0, "World");
         allList.add("MLDN");
         allList.add("www.mldn.cn");
+        System.out.println(allList.contains("Hello") );
+        System.out.println("MLDN字符串的位置：" + allList.indexOf("MLDN"));
+        System.out.println("集合操作后是否为空？" + allList.isEmpty());
     }
 }
