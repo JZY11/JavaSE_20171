@@ -24,3 +24,7 @@ class MethodLocalVariableTest{
         System.out.println("方法局部变量a的值：" + a);
     }
 }
+class VariableOverrideTest{
+    private String name = "Tom";//定义一个name实例变量
+    private static double price = 78.0; //定义一个price类变量
+}
