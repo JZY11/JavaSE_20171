@@ -10,12 +10,12 @@ public class OverloadTest {
         System.out.println("无参数");
     }
     public void test(String s){
-        System.out.println("重载的test方法");
+        System.out.println("重载的test方法:" + s);
     }
 
     public static void main(String[] args) {
         OverloadTest overloadTest = new OverloadTest();
         overloadTest.test();
-
+        overloadTest.test("GoodBoy");
     }
 }
