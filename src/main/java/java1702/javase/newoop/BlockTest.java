@@ -17,5 +17,10 @@ public class BlockTest {
     }
 }
 class MethodLocalVariableTest{
-
+    public static void main(String[] args) {
+        int a; // 定义一个局部变量
+        //System.out.println("方法局部变量a的值：" + a);//报错 变量a还没有初始化
+        a = 5;
+        System.out.println("方法局部变量a的值：" + a);
+    }
 }
