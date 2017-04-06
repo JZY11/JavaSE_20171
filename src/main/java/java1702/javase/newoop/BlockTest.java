@@ -27,4 +27,9 @@ class MethodLocalVariableTest{
 class VariableOverrideTest{
     private String name = "Tom";//定义一个name实例变量
     private static double price = 78.0; //定义一个price类变量
+    public static void main(String[] args) {
+        int price = 65;//定义一个方法里的局部变量，局部变量覆盖成员变量
+        System.out.println(price);//直接访问price变量，将输出price局部变量的值：65
+        System.out.println(VariableOverrideTest.price);//使用类名作为price变量的限定
+    }
 }
