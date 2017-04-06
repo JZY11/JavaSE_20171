@@ -31,5 +31,12 @@ class VariableOverrideTest{
         int price = 65;//定义一个方法里的局部变量，局部变量覆盖成员变量
         System.out.println(price);//直接访问price变量，将输出price局部变量的值：65
         System.out.println(VariableOverrideTest.price);//使用类名作为price变量的限定
+        VariableOverrideTest variableOverrideTest  = new VariableOverrideTest();
+        variableOverrideTest.info();// 静态方法里不能直接调用非静态方法，可间接调用，先实例化对象，用对象调用非静态方法
+    }
+    public void info(){
+        String name = "猪八戒";//方法里的局部变量，而局部变量覆盖了成员变量
+        System.out.println(name);
+        System.out.println(this.name);// 使用this来作为name变量的限定，将输出name实例变量的值Tom
     }
 }
