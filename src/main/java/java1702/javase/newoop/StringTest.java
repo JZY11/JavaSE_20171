@@ -13,5 +13,6 @@ public class StringTest {
         System.out.println(s.concat("World"));
         System.out.println(s.contains("e"));
         System.out.println(s.equals("Hey"));
+        System.out.println(s.indexOf('l'));
     }
 }
