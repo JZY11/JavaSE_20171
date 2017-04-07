@@ -13,7 +13,7 @@ public class Test1 {
         int[][] ints = new int[3][3];
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
-        int nul = 1;
+        int mul = 1;
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
                 System.out.println("input int:");// ??
@@ -22,10 +22,12 @@ public class Test1 {
                     sum += ints[i][j];
                 }
                 if(i + j == ints.length - 1){
-                    nul *= ints[i][j];
+                    mul *= ints[i][j];
                 }
             }
         }
         System.out.println(Arrays.deepToString(ints));
+        System.out.println(sum);
+        System.out.println(mul);
     }
 }
