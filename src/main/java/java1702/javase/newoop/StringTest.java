@@ -20,5 +20,9 @@ public class StringTest {
         System.out.println(s.replace('H', 'A'));
         System.out.println(s.toLowerCase());
         System.out.println(s.toUpperCase());
+        System.out.println("------------->");
+        char[] chars = s.toCharArray();
+        System.out.println(chars);
+
     }
 }
