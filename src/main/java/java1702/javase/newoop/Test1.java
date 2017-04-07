@@ -17,6 +17,12 @@ public class Test1 {
             for (int j = 0; j < ints[i].length; j++) {
                 System.out.println("input int:");// ??
                 ints[i][j] = scanner.nextInt();
+                if (i == i) {
+                    sum += ints[i][j];
+                }
+                if(i + j == ints.length - 1){
+                    nul *= ints[i][j];
+                }
             }
 
         }
