@@ -12,5 +12,6 @@ public class StringTest {
         System.out.println();
         System.out.println(s.concat("World"));
         System.out.println(s.contains("e"));
+        System.out.println(s.equals("Hey"));
     }
 }
