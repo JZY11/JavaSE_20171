@@ -16,5 +16,6 @@ public class StringTest {
         System.out.println(s.indexOf('l'));
         System.out.println(s.isEmpty());
         System.out.println(s.lastIndexOf('l'));
+        System.out.println(s.length());
     }
 }
