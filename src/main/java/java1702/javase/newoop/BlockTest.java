@@ -38,5 +38,5 @@ class VariableOverrideTest{
         String name = "猪八戒";//方法里的局部变量，而局部变量覆盖了成员变量
         System.out.println(name);
         System.out.println(this.name);// 使用this来作为name变量的限定，将输出name实例变量的值Tom
-    }
+    }//  注意方法内部调用
 }
