@@ -1,5 +1,6 @@
 package java1702.javase.newoop;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -24,7 +25,7 @@ public class Test1 {
                     nul *= ints[i][j];
                 }
             }
-
         }
+        System.out.println(Arrays.deepToString(ints));
     }
 }
