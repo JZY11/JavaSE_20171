@@ -15,15 +15,36 @@ public class Test2 {
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             char aChar = chars[i];
-            if (aChar >= 'A' && aChar <= 'Z') {
+            if (aChar >= 'A' && aChar <= 'Z') {//只局限于英文字母
                 chars[i] = (char) (aChar + 32);
             } if (aChar >= 'a' && aChar <= 'z'){
                 chars[i] = (char) (aChar - 32);
             }
         }
-        char tem = chars[0];
+        char temp = chars[0];
         chars[0] = chars[chars.length - 1];
-        chars[chars.length - 1] = tem;
+        chars[chars.length - 1] = temp;
         System.out.println(String.valueOf(chars));
+        System.out.println(new String(chars));//同上面的方法一样，两种方法
     }
+}
+class _Test2{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            char aChar = chars[i];
+
+
+
+
+        }
+        char temp = chars[0];
+        chars[0] = chars[chars.length - 1];
+        chars[chars.length - 1] = temp;
+        System.out.println(String.valueOf(chars));
+        System.out.println(new String(chars));//同上面的方法一样，两种方法
+    }
+
 }
