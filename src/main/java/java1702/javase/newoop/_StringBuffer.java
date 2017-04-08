@@ -10,8 +10,11 @@ public class _StringBuffer {
         StringBuffer stringBuffer = new StringBuffer("hello");
         System.out.println(stringBuffer.append(" world"));
         System.out.println(stringBuffer.delete(5, 6));
-        System.out.println(stringBuffer.insert(5," "));
+        System.out.println(stringBuffer.insert(5," ")); // offset 偏移量
         System.out.println(stringBuffer.insert(stringBuffer.length(), "!"));
         System.out.println(stringBuffer.reverse());
+        stringBuffer.setCharAt(0, 'H');
+        System.out.println(stringBuffer);
+        System.out.println(stringBuffer);
     }
 }
