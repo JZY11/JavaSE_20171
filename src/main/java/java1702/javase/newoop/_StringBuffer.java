@@ -15,6 +15,6 @@ public class _StringBuffer {
         System.out.println(stringBuffer.reverse());
         stringBuffer.setCharAt(0, 'H');
         System.out.println(stringBuffer);
-        System.out.println(stringBuffer);
+
     }
 }
