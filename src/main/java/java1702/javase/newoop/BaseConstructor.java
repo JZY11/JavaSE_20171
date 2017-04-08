@@ -5,6 +5,7 @@ package java1702.javase.newoop;
  * on 2017/4/8.
  * JavaSE_20171.
  */
+//       调用父类构造方法
 public class BaseConstructor {
     public double size;
     public String name;
