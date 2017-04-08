@@ -19,7 +19,7 @@ public class VectorTest {
         System.out.println(strings);
     }
 }
-class _Vector{
+class _Vector extends Vector{
     public static void main(String[] args) {//初始化向量的容量及容量的增量
         Vector<String> strings = new Vector<>(4, 2);
         strings.add("hello");
@@ -30,5 +30,7 @@ class _Vector{
         System.out.println(strings.get(3));
         System.out.println(strings.size());
         System.out.println(strings.capacity());
+
+
     }
 }
