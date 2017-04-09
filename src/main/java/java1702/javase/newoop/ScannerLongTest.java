@@ -7,6 +7,9 @@ import java.util.Scanner;
  * on 2017/4/9.
  * JavaSE_20171.
  */
+/*
+   如下代码通过hasNextLong()和nextLong()两个方法，Scanner可以直接从输入流中获得long型整数输入项
+ */
 public class ScannerLongTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
