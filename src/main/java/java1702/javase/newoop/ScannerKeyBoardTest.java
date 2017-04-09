@@ -9,6 +9,7 @@ import java.util.Scanner;
  */
 /*
     只要把下面代码sc.useDelimiter注释去掉，该程序就会把键盘的每行输入当成一个输入项，不会一空格，Tab空白等作为分割符
+    hasNext()和next()方法   适应性强  任何类型都可以
  */
 public class ScannerKeyBoardTest {
     public static void main(String[] args) {
