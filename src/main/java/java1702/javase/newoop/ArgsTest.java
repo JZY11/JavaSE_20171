@@ -7,8 +7,8 @@ package java1702.javase.newoop;
  */
 public class ArgsTest {
     public static void main(String[] args) {
-        System.out.println(args.length);
-        for (String arg : args) {
+        System.out.println(args.length);//输出args数组的长度
+        for (String arg : args) {// 遍历每rgs数组的每个元素
             System.out.println(arg);
         }
     }
