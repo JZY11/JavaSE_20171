@@ -12,9 +12,9 @@ import java.util.Scanner;
  */
 public class ScannerKeyBoardTest {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);// System.in代表标准输入，就是键盘输入
         sc.useDelimiter("\n"); //"\n"(新行)转义字符，注释掉后若用户输入的有空格的话就会转行输出
-        while (sc.hasNext()){
+        while (sc.hasNext()){//   判断是否还有下一个输入项
             System.out.println("键盘输入的内容是：" + sc.next());
         }
     }
