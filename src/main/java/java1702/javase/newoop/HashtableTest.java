@@ -19,5 +19,8 @@ public class HashtableTest {
         for (Integer integer : hashtable.keySet()) {
             System.out.println(integer + "------>" + hashtable.get(integer));
         }
+        for (String s : hashtable.values()) {
+            System.out.println(s);
+        }
     }
 }
