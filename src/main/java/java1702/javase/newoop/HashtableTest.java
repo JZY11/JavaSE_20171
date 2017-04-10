@@ -14,6 +14,11 @@ public class HashtableTest {
         hashtable.put(1, "hello");
         hashtable.put(2, "hi");
         hashtable.put(3,"world");
+        hashtable.put(3, "Wow");
+        hashtable.put(4, "hi");
+//        hashtable.put(null, "haha");
+//        hashtable.put(100, null);//   键或者值为null时，虽然编译时不报错但运行时会报错
+//        hashtable.clear();
         System.out.println(hashtable.size());
         System.out.println(hashtable.get(1));
         System.out.println(hashtable.remove(2));
