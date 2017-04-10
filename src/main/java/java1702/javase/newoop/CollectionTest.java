@@ -2,6 +2,7 @@ package java1702.javase.newoop;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * Created by zhenya.1291813139.com
@@ -15,9 +16,14 @@ public class CollectionTest {
         c.add(6);
         System.out.println("c的集合的元素个数为：" + c.size());
         System.out.println(c.remove(6));// 删除指定元素
+        System.out.println(c.size());
         System.out.println(c.contains("孙悟空"));
-        c.add("轻量级Java EE企业引用实战");
+        c.add("轻量级Java EE企业应用实战");
         System.out.println("c集合的元素：" + c);
+        Collection<String> books = new HashSet<>();
+        books.add("轻量级Java EE企业应用实战");
+        books.add("疯狂Java讲义");
+        System.out.println("c集合是否完全包含books集合："+ c.containsAll(books));
 
     }
 }
