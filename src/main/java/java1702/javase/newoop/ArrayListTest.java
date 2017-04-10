@@ -28,6 +28,7 @@ public class ArrayListTest {
         System.out.println(list.lastIndexOf("hello"));
         System.out.println(list.remove("Wow"));
         System.out.println("--------");
+        System.out.println(list.subList(2, 3));//  2包括，3不包括(截取成子集合)
 
     }
 }
