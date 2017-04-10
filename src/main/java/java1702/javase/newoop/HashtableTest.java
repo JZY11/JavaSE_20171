@@ -13,5 +13,6 @@ public class HashtableTest {
         hashtable.put(1, "hello");
         hashtable.put(2, "hi");
         System.out.println(hashtable.size());
+        System.out.println(hashtable.get(1));
     }
 }
