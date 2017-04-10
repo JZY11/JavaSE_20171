@@ -1,6 +1,7 @@
 package java1702.javase.newoop;
 
 import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * Created by zhenya.1291813139.com
@@ -21,6 +22,9 @@ public class HashtableTest {
         }
         for (String s : hashtable.values()) {
             System.out.println(s);
+        }
+        for (Map.Entry<Integer, String> integerStringEntry : hashtable.entrySet()) {
+            System.out.println(integerStringEntry.getKey() + "--->" + integerStringEntry.getValue());
         }
     }
 }
