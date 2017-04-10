@@ -1,0 +1,23 @@
+package java1702.javase.newoop;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+/**
+ * Created by zhenya.1291813139.com
+ * on 2017/4/10.
+ * JavaSE_20171.
+ */
+public class CollectionTest {
+    public static void main(String[] args) {
+        Collection<Object> c = new ArrayList<>();
+        c.add("孙悟空");
+        c.add(6);
+        System.out.println("c的集合的元素个数为：" + c.size());
+        System.out.println(c.remove(6));// 删除指定元素
+        System.out.println(c.contains("孙悟空"));
+        c.add("轻量级Java EE企业引用实战");
+        System.out.println("c集合的元素：" + c);
+
+    }
+}
