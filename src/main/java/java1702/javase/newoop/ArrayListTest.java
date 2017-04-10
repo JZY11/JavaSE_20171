@@ -13,7 +13,9 @@ public class ArrayListTest {
         List<String> list = new ArrayList<>();
         list.add("hey");
         list.add("hello");
+        list.add("hello");
         list.add("hi");
+        list.add("Wow");
         System.out.println(list.size());
         System.out.println(list.get(1));
         for (String s : list) {
@@ -22,5 +24,10 @@ public class ArrayListTest {
 //        list.clear();
         System.out.println(list.contains("hey"));
         System.out.println(list.indexOf("hi"));//  返回整型int 索引
+        System.out.println(list.isEmpty());
+        System.out.println(list.lastIndexOf("hello"));
+        System.out.println(list.remove("Wow"));
+        System.out.println("--------");
+
     }
 }
