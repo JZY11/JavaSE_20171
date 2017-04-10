@@ -17,7 +17,7 @@ public class ListIteratorTest {
         for (int i = 0; i < books.length; i++) {
             bookList.add(books[i]);
         }
-        ListIterator lit = bookList.listIterator();
+        ListIterator lit = bookList.listIterator();// listIterrator方法返回一个ListIterator对象
         while (lit.hasNext()){
             System.out.println(lit.next());
             lit.add("------分隔符------");
