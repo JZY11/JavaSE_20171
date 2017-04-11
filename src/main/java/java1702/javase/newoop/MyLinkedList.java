@@ -18,6 +18,35 @@ public class MyLinkedList {
         myLinkedList.add("b");
         System.out.println(myLinkedList.first());
         System.out.println(myLinkedList.last());
+        System.out.println(myLinkedList.get(1));
+        myLinkedList.remove(0);
+    }
+    public String remove(int index){
+        Node node = getNode(index);// 找到要删除的node
+        String element = node.element;//  要删除node处的元素element
+        Node prev = node.prev;
+        Node next = node.next;
+        if (prev == null && next == null) {
+            node.element = null;
+        } else if (prev == null){
+            first = next;
+            next.prev = null;
+            node.next = null;
+            node.element = null;
+        }
+        return element;
+    }
+
+    private Node getNode(int index) {
+        return null;
+    }
+
+    public String get(int index){
+        Node node = first;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node.element;
     }
 
     public boolean add(String element) {
@@ -26,6 +55,9 @@ public class MyLinkedList {
             first = node;
             last = node;
         } else {
+            Node node = new Node(element, last, null);
+            last.next = node;
+            last = node;
         }
         return true;
     }
