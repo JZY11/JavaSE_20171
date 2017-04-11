@@ -18,5 +18,13 @@ public class HashSetTest {
         for (String string : strings) {//HashSet无get方法，只能遍历输出
             System.out.println(string);
         }
+//        strings.clear();
+        System.out.println(strings.contains("hello"));
+        System.out.println(strings.isEmpty());
+        System.out.println(strings.remove("hey"));
+        System.out.println("-----------");
+        for (String string : strings) {
+            System.out.println(string);
+        }
     }
 }
