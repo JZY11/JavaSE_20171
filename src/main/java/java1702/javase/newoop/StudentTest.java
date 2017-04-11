@@ -21,9 +21,9 @@ public class StudentTest {
         strings.add("age");
         strings.add("gender");
         Iterator<String> iterator = strings.iterator();
-            System.out.println(strings);
-//        while (iterator.hasNext()){
-//        }
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
 
     }
 }
