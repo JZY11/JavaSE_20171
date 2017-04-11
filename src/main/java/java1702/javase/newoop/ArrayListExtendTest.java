@@ -18,7 +18,7 @@ public class ArrayListExtendTest {
         strings2.add("b");
         strings2.add("c");
         System.out.println(strings1.equals(strings2));
-        List<String> strings3 = new ArrayList<>(strings2.subList(1, 3));//strings2.subList(1, 3) 为一视图，需要变为一个列表,否则最后一步报错
+        List<String> strings3 = new ArrayList<>(strings2.subList(1, 3));//strings2.subList(1, 3) 为一视图，需要变为一个列表,否则最后一步报错， 将strings2.subList(1, 3)作为()里的参数变为一个列表
         System.out.println(strings3);
         System.out.println(strings2.containsAll(strings3));
         System.out.println(strings1.containsAll(strings3));
