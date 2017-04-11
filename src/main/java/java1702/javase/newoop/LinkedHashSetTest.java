@@ -8,7 +8,7 @@ import java.util.LinkedHashSet;
  * on 2017/4/11.
  * JavaSE_20171.
  */
-public class LinkedHashSetTest {
+public class LinkedHashSetTest {//  按元素添加顺序排序
     public static void main(String[] args) {
         LinkedHashSet<String> strings = new LinkedHashSet<>();
         strings.add("d");

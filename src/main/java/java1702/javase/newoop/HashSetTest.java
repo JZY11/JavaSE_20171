@@ -7,7 +7,7 @@ import java.util.HashSet;
  * on 2017/4/11.
  * JavaSE_20171.
  */
-public class HashSetTest {
+public class HashSetTest {//  使用 HashMap 存储元素  无序  效率高
     public static void main(String[] args) {
         HashSet<String> strings = new HashSet<>();
         strings.add("hello");
