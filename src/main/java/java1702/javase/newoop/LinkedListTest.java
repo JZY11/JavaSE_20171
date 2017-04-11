@@ -20,5 +20,6 @@ public class LinkedListTest {
             System.out.println(s);
         }
         System.out.println(list.getFirst());
+        System.out.println(list.getLast());
     }
 }
