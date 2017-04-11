@@ -1,8 +1,6 @@
 package java1702.javase.newoop;
 
-import java1702.javase.oop.Student;
-
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 
 /**
@@ -10,9 +8,14 @@ import java.util.Iterator;
  * on 2017/4/11.
  * JavaSE_20171.
  */
+// 编写一个学生类，将学生的姓名，年龄，性别分别保存到 HashSet ArrayList Hashtable 中
+// 并利用迭代器 Iterator 将姓名，年龄，性别打印出来
 public class E1 {
     public static void main(String[] args) {
-        ArrayList<student> students = new ArrayList<>();
+//        ArrayList<student> students = new ArrayList<>();
+//        students.add(new student("tom", 18, 'M'));
+//        students.add(new student("jerry", 17, 'F'));
+        HashSet<student> students = new HashSet<>();
         students.add(new student("tom", 18, 'M'));
         students.add(new student("jerry", 17, 'F'));
         Iterator<student> iterator = students.iterator();
