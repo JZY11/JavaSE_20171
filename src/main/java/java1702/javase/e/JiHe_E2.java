@@ -23,7 +23,6 @@ public class JiHe_E2 {
         Map<String, Double> map = new HashMap<>();
         map.put("Tom", 3000d);
         map.put("Jack", 2500d);
-        map.put("Jack", 1500d);
         map.put("Tony", 900d);
         for (String s : map.keySet()) {
             System.out.println(s);
@@ -33,10 +32,13 @@ public class JiHe_E2 {
         }
         map.remove("Tom");
         System.out.println(map);
-        for (Map.Entry<String, Double> entry : map.entrySet()) {
-            if (entry.getValue() < 1000){
-                System.out.println(entry.getKey() + "-->" + entry.getValue() * 1.2);
+        map.put("Jack", 1500d);
+        System.out.println(map.get("Jack"));
+        for (String s : map.keySet()) {
+            if (map.get(s) < 1000){
+                map.put(s, map.get(s) * 1.2);
             }
         }
+        System.out.println(map);
     }
 }
