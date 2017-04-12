@@ -2,6 +2,7 @@ package java1702.javase.newoop;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by zhenya.1291813139.com
@@ -15,6 +16,7 @@ public class HashMapTest {
         map.put(2, "bcd");
         map.put(3, "def");
         System.out.println(map.size());
+        System.out.println(map.get(2));
         for (Integer integer : map.keySet()) {
             System.out.println(integer + "-->" + map.get(integer));
         }
@@ -24,5 +26,10 @@ public class HashMapTest {
         for (Map.Entry<Integer, String> integerStringEntry : map.entrySet()) {
             System.out.println(integerStringEntry.getKey() +"-->" +integerStringEntry.getValue());
         }
+//        map.clear();
+        System.out.println(map.isEmpty());
+        System.out.println("===========");
+        Set<Integer> integers= map.keySet();
+        System.out.println(integers);
     }
 }
