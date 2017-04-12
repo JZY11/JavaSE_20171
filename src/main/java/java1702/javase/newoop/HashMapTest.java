@@ -1,5 +1,6 @@
 package java1702.javase.newoop;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -34,5 +35,7 @@ public class HashMapTest {
         System.out.println("------->");
         Set<Map.Entry<Integer, String>> integers1 = map.entrySet();
         System.out.println(integers1);
+        Collection<String> strings = map.values();
+        System.out.println(strings);
     }
 }
