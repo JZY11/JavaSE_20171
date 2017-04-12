@@ -34,9 +34,13 @@ public class ListIteratorTest {
         vector.add("d");
         ListIterator<String> listIterator = vector.listIterator();
         while (listIterator.hasNext()) {
+            listIterator.add("HaHa");
             System.out.println(listIterator.next());
+            System.out.println(listIterator.nextIndex());
         }
+        System.out.println("------------");
         while (listIterator.hasPrevious()){
+            System.out.println(listIterator.previousIndex());
             System.out.println(listIterator.previous());
         }
     }
