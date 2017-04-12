@@ -16,6 +16,9 @@ public class HashMapTest {
         map.put(1, "a");
         map.put(2, "bcd");
         map.put(3, "def");
+        map.put(null, "jin");//  HasTable的键和值都不允许为空值
+        map.put(100, null);//  键重复时会替换原来的值
+        map.put(100, "uotur");
         System.out.println(map.size());
         System.out.println(map.get(2));
         for (Integer integer : map.keySet()) {
