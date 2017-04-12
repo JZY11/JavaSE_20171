@@ -10,11 +10,11 @@ import java.util.LinkedHashSet;
  */
 public class LinkedHashMapTest {
     public static void main(String[] args) {
-        LinkedHashMap<Integer,String> map = new LinkedHashMap<>();
+        LinkedHashMap<Integer, String> map = new LinkedHashMap<>();
         map.put(1, "a");
         map.put(100, "bc");
-        map.put(100, "def");
-        System.out.println( map.size());
+        map.put(1000, "def");
+        System.out.println(map.size());
         System.out.println(map.get(100));
         for (Integer integer : map.keySet()) {
             System.out.println(integer + "-->" + map.get(integer));
