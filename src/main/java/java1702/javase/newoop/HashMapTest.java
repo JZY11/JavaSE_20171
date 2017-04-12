@@ -31,5 +31,8 @@ public class HashMapTest {
         System.out.println("===========");
         Set<Integer> integers= map.keySet();
         System.out.println(integers);
+        System.out.println("------->");
+        Set<Map.Entry<Integer, String>> integers1 = map.entrySet();
+        System.out.println(integers1);
     }
 }
