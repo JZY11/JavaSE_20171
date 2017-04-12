@@ -33,15 +33,21 @@ public class ListIteratorTest {
         vector.add("c");
         vector.add("d");
         ListIterator<String> listIterator = vector.listIterator();
+        // next
         while (listIterator.hasNext()) {
-            listIterator.add("HaHa");
             System.out.println(listIterator.next());
             System.out.println(listIterator.nextIndex());
+            listIterator.add("HaHa");
+//            listIterator.remove();
         }
+        System.out.println(vector);
         System.out.println("------------");
+        //  prev
         while (listIterator.hasPrevious()){
+            listIterator.add("HeHe");
             System.out.println(listIterator.previousIndex());
             System.out.println(listIterator.previous());
         }
+        System.out.println(vector);
     }
 }
