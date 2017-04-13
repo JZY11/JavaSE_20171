@@ -36,7 +36,7 @@ public class JiHe_E2 {
         System.out.println(map.get("Jack"));
         for (String s : map.keySet()) {
             if (map.get(s) < 1000){
-                map.put(s, map.get(s) * 1.2);
+                map.put(s, map.get(s) * 1.2);// !!
             }
         }
         System.out.println(map);
