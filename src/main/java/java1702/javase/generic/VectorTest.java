@@ -19,7 +19,7 @@ public class VectorTest {
 //        System.out.println(vector.get(3));
 
         Vector<String> vector = new Vector<>();
-        vector.add("abc");// 定义了泛型之后，若添加的不属于定义的泛型，则会类型检查报错
+        vector.add("abc");// 定义了泛型之后，类型安全  若添加的不属于定义的泛型，则会类型检查报错
         vector.add("123");// 避免类型转换时报错并去除了类型转换，还可简化代码
         vector.add("true");
         System.out.println(vector.get(2));
