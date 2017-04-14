@@ -17,7 +17,7 @@ public class Test<T> {
         System.out.println(test2.concat(new Date(), new Date()));
 //        System.out.println(test.concat(new System[8], new System[4]));
     }
-    public String concat(T x, T y){
+    private String concat(T x, T y){// T类型变量
         return String.valueOf(x).concat(String.valueOf(y));
     }
 

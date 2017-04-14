@@ -18,6 +18,7 @@ public class StringTest {
         System.out.println();
 //        System.out.println(s.concat("World"));
         System.out.println(s.contains("e"));
+        System.out.println("+=+=+=+=");
         System.out.println(s.equals("Hey"));
         System.out.println(s.endsWith("A"));
         System.out.println(s.equalsIgnoreCase("hello hey"));
