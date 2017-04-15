@@ -12,6 +12,7 @@ public class Test3 {
     public static void main(String[] args) {
         String s0 = "123,45,25,85";
         String[] strings = s0.split(",");
+        System.out.println(strings.length);
         System.out.println(Arrays.toString(strings));// 可输出字符数组， Arrays工具类
         int[] a=new int[strings.length];
 
