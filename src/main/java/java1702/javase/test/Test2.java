@@ -15,6 +15,7 @@ public class Test2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请用户随意输入任意多的字母与数字的组合");
         String s = scanner.nextLine();
+
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             char aChar = chars[i];
