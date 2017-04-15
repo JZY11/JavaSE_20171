@@ -12,7 +12,6 @@ public class Test1 {
         int len1 = 3;
         int len2 = 5;
         Test1 test1 = new Test1();
-
         System.out.println(test1.getNum(len1, s1, len2, s2));
 
     }
