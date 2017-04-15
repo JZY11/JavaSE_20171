@@ -7,6 +7,9 @@ import java.util.Scanner;
  * on 2017/4/15.
  * JavaSE_20171.
  */
+/*
+   找出字符串中出现次数最多的字母和出现的次数
+ */
 public class Test2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
