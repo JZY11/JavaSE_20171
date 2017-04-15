@@ -21,28 +21,28 @@ public class Test4 {
         System.out.println(new Test4().getMaxCharacters(input));
     }
 
-    public String getMaxCharacters(String input){
+    private String getMaxCharacters(String input){
         char[] chars = new char[255];
         char[] in = input.toCharArray();
 
         Set<Character> set = new HashSet<>();//记录所有出现的最大的字符
         int maxCount = 0;//最大的次数
-        for (int i = 0; i < in.length; i++) {
-            int tempCount = (int)++chars[in[i]];//统计字符出现的次数，数组下标代表字符，数组内容记录次数
-            if(tempCount >= maxCount){
+        for (char anIn : in) {
+            int tempCount = (int) ++chars[anIn];//统计字符出现的次数，数组下标代表字符，数组内容记录次数
+            if (tempCount >= maxCount) {
 
-                if(tempCount > maxCount)//如果当前的字符次数比最大的大则清除记录
+                if (tempCount > maxCount)//如果当前的字符次数比最大的大则清除记录
                     set.clear();
                 maxCount = tempCount;
-                set.add(in[i]);
+                set.add(anIn);
             }
         }
 
         StringBuilder sb = new StringBuilder();
         Object[] array = set.toArray();//保存所有出现次数最大的字符的数组
-        for (int i = 0; i < array.length; i++) { //可能有多个字符出现次数都是最大
+        for (Object anArray : array) { //可能有多个字符出现次数都是最大
             for (int j = 1; j <= maxCount; j++) {//最大的次数
-                sb.append((array[i]).toString());
+                sb.append((anArray).toString());
             }
         }
 
