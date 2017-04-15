@@ -23,8 +23,13 @@ public class StringTest {
         System.out.println(s.endsWith("A"));
         System.out.println(s.equalsIgnoreCase("hello hey"));
         System.out.println("==================");
+        String[] str = s.split(" ");
+        System.out.println(str);
 
         System.out.println(Arrays.toString(s.split(" ")));//(一)工具类截成一个字符数组
+
+
+        System.out.println("->->->->->->->");
 
         char[] chars = s.toCharArray();
         System.out.println(chars);//(二)     (一)与(二)都能达到目的，但(一)更简便
