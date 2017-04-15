@@ -12,13 +12,27 @@ import java.util.Scanner;
  */
 public class Test2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("请用户随意输入任意多的字母与数字的组合");
-        String s = scanner.nextLine();
+        String str = "sdasewdasdaeawfawerfadsdfasrfqwe";
+        int count = 0;
+        char res = getMostFrequencyChar(str, count);
+        System.out.println("出现次数最多的字母是："+res);
+    }
 
-        char[] chars = s.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            char aChar = chars[i];
+    public static char getMostFrequencyChar(String str, int count){
+        char ret= ' ';
+        int[] sum = new int[128];
+        for(int i=0; i<str.length(); i++){
+            char c = str.charAt(i);
+            if((65 <= c && c <= 90) || (97 <= c && c <=122))
+                sum[c]++;
         }
+        for(int i=0; i<sum.length; i++)
+            if(sum[i] > count)
+            {
+                count = sum[i];
+                ret = (char) i;
+            }
+        System.out.println("出现最多的次数为："+ count +"次");
+        return ret;
     }
 }
