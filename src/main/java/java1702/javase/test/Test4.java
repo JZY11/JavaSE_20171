@@ -38,8 +38,14 @@ public class Test4 {
             }
         }
 
+        StringBuilder sb = new StringBuilder();
+        Object[] array = set.toArray();//保存所有出现次数最大的字符的数组
+        for (int i = 0; i < array.length; i++) { //可能有多个字符出现次数都是最大
+            for (int j = 1; j <= maxCount; j++) {//最大的次数
+                sb.append((array[i]).toString());
+            }
+        }
 
-
-//        return sb.toString();
+        return sb.toString();
     }
 }
