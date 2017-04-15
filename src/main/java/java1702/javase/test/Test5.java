@@ -1,5 +1,7 @@
 package java1702.javase.test;
 
+import java.util.Scanner;
+
 /**
  * Created by zhenya.1291813139.com
  * on 2017/4/15.
@@ -13,6 +15,8 @@ package java1702.javase.test;
  */
 public class Test5 {
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一个小数");
+        String s = scanner.nextLine();
     }
 }
