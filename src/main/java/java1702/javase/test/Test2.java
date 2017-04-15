@@ -22,7 +22,7 @@ public class Test2 {
         int[] sum = new int[128];
         for(int i=0; i<str.length(); i++){
             char c = str.charAt(i);
-            if((65 <= c && c <= 90) || (97 <= c && c <=122))
+            if((65 >= c && c <= 90) || (97 >= c && c <=122))
                 sum[c]++;
         }
         for(int i=0; i<sum.length; i++)
