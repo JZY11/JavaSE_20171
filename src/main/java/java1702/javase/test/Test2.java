@@ -1,6 +1,5 @@
 package java1702.javase.test;
 
-import java.util.Scanner;
 
 /**
  * Created by zhenya.1291813139.com
@@ -12,13 +11,13 @@ import java.util.Scanner;
  */
 public class Test2 {
     public static void main(String[] args) {
-        String str = "sdasewdasdaeawfawerfadsdfasrfqwe";
+        String str = "vachuavcxbkajsioahfhaljdafh";
         int count = 0;
         char res = getMostFrequencyChar(str, count);
         System.out.println("出现次数最多的字母是："+res);
     }
 
-    public static char getMostFrequencyChar(String str, int count){
+    private static char getMostFrequencyChar(String str, int count){
         char ret= ' ';
         int[] sum = new int[128];
         for(int i=0; i<str.length(); i++){
