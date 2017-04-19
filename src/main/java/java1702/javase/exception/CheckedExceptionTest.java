@@ -39,8 +39,8 @@ public class CheckedExceptionTest {
 //            RandomAccessFile randomAccessFile = new RandomAccessFile("","r");// mode:后可加"r", "rw", "rws", or "rwd"中的一种
 //        } catch (FileNotFoundException e) {
 ////            e.printStackTrace();
-//            System.out.println("file not found!");// 积极的处理
-//            test();// 递归 recursive
+//            System.out.println("file not found!");
+//            test();// 积极的处理 递归 recursive
 //        }
 //    }
 }

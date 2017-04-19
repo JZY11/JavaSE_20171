@@ -12,18 +12,15 @@ public class InputStreamTest {
     public static void main(String[] args) {
         try {
             InputStream inputStream  = new FileInputStream("D:/test.txt");
-//            int i = inputStream.read();
-            int i;
-//            while(i != -1){
-////                System.out.println(i);
-//                inputStream.read();
-//                i = inputStream.read();
-//                System.out.print((char)i);
-//
-//            }
-            while ((i = inputStream.read())!= -1){
-                System.out.print((char)i);
+            int i = inputStream.read();// 1
+//            int i;// 2
+            while(i != -1){// 1
+                System.out.print((char)i);// 1
+                i = inputStream.read();// 1
             }
+//            while ((i = inputStream.read())!= -1){// 2
+//                System.out.print((char)i);// 2
+//            }
 //            System.out.println(inputStream.read());
 //            System.out.println(inputStream.read());
 //            System.out.println(inputStream.read());
