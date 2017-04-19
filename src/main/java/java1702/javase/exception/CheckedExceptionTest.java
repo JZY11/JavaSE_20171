@@ -19,8 +19,8 @@ public class CheckedExceptionTest {
         } catch (FileNotFoundException e) {// 受检异常必须要对其进行处理
             e.printStackTrace();
         }
-        // extract method(抽取方法)  Ctrl + Alt + M
         test();
+        // extract method(抽取方法)  Ctrl + Alt + M
 
 //
 //        System.out.println("test....");
