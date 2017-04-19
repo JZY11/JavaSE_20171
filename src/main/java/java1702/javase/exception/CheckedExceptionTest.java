@@ -11,15 +11,17 @@ import java.util.Scanner;
  */
 /*
   model:""(双引号内没有东西时为非受检异常)|| name:" "(双引号内的文件若是错误的则为受检异常)
+  model:" "双引号中若为r的话(只读),name中的文件必须为已经存在的，若为rw(读写)时，即使文件不存在也会自动生成写一个
  */
 public class CheckedExceptionTest {
     public static void main(String[] args) {
         try {
-            RandomAccessFile randomAccessFile = new RandomAccessFile("","");
+            RandomAccessFile randomAccessFile = new RandomAccessFile("build.gradle","r");
         } catch (FileNotFoundException e) {// 受检异常必须要对其进行处理
             e.printStackTrace();
         }
-        test();
+        System.out.println("test");
+//        test();
         // extract method(抽取方法)  Ctrl + Alt + M
 
 //
@@ -29,16 +31,16 @@ public class CheckedExceptionTest {
 //            System.out.println(strings[i]);
 //        }
     }
-    private static void test() {
-        System.out.println("input a file name:");
-        Scanner scanner = new Scanner(System.in);
-        String s =scanner.nextLine();// 若文件名输入错误并非是程序员所能控制的为受检异常，必须要处理
-        try {
-            RandomAccessFile randomAccessFile = new RandomAccessFile("","r");// mode:后可加"r", "rw", "rws", or "rwd"中的一种
-        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-            System.out.println("file not found!");
-            test();// 递归 recursive
-        }
-    }
+//    private static void test() {
+//        System.out.println("input a file name:");
+//        Scanner scanner = new Scanner(System.in);
+//        String s =scanner.nextLine();// 若文件名输入错误并非是程序员所能控制的为受检异常，必须要处理
+//        try {
+//            RandomAccessFile randomAccessFile = new RandomAccessFile("","r");// mode:后可加"r", "rw", "rws", or "rwd"中的一种
+//        } catch (FileNotFoundException e) {
+////            e.printStackTrace();
+//            System.out.println("file not found!");// 积极的处理
+//            test();// 递归 recursive
+//        }
+//    }
 }
