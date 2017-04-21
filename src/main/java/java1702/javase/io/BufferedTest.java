@@ -7,9 +7,12 @@ import java.io.*;
  * on 2017/4/21.
  * JavaSE_20171.
  */
+/*
+      基于字符&字节的输入和输出
+ */
 public class BufferedTest {
-    public static void main(String[] args) {
-        try(
+    public static void main(String[] args) { // buffered 缓冲(提高输入输出效率)
+        try(  //若去掉声明的两个资源前的Buffered则copy的一个大型视频&音频的速度会慢的多
                 BufferedInputStream in = new BufferedInputStream(new FileInputStream("C:/Users/Tony.Jaa/Desktop/0420_Download.mov"));
                 BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("C:/Users/Tony.Jaa/Desktop/new_Download.mov"))
                 ) {
