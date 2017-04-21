@@ -39,6 +39,5 @@ public class ReaderTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
