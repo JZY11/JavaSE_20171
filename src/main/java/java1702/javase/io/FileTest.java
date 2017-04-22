@@ -26,6 +26,9 @@ public class FileTest {
 
         System.out.println(file.getAbsoluteFile());
         System.out.println(file.getAbsolutePath());
+        System.out.println(file.getName());// raf
+        System.out.println(file.getParent());// 返回上一层的路径
+        System.out.println(file.getParentFile());
 
 
     }
