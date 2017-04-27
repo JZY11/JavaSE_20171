@@ -2,6 +2,7 @@ package java1702.javase.io;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 /**
  * Created by zhenya.1291813139.com
