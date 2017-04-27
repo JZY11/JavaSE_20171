@@ -9,7 +9,9 @@ import java.util.regex.Pattern;
  */
 public class Demo01 {
     public static void main(String[] args) {
-//        Pattern pattern = Pattern.compile("l",Pattern.CASE_INSENSITIVE);CASE_INSENSITIVE大小写不敏感
+//        Pattern pattern = Pattern.compile("l",Pattern.CASE_INSENSITIVE);CASE_INSENSITIVE大小写不敏感，为整型，整型值为2
+        //  0x开头的为16进制   0开头的为十进制  0b开头的为二进制
+        System.out.println(Pattern.CASE_INSENSITIVE);
         Pattern pattern = Pattern.compile("(?i)l");
         Matcher matcher = pattern.matcher("heLLo");
 //        System.out.println(matcher.find()); // find() 可看成指针  方法不返回具体值，返回布尔
