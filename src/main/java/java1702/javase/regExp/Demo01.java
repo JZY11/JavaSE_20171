@@ -9,10 +9,10 @@ import java.util.regex.Pattern;
  */
 public class Demo01 {
     public static void main(String[] args) {
-//        Pattern pattern = Pattern.compile("l",Pattern.CASE_INSENSITIVE);
+//        Pattern pattern = Pattern.compile("l",Pattern.CASE_INSENSITIVE);CASE_INSENSITIVE大小写不敏感
         Pattern pattern = Pattern.compile("(?i)l");
         Matcher matcher = pattern.matcher("heLLo");
-//        System.out.println(matcher.find()); // find() 方法不返回具体值，返回布尔
+//        System.out.println(matcher.find()); // find() 可看成指针  方法不返回具体值，返回布尔
         while (matcher.find()){// matcher.find() 可看成指针  find()返回由以前匹配操作所匹配的输入子序列
             System.out.println(matcher.group());
         }
