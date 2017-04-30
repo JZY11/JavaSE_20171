@@ -17,7 +17,8 @@ import java.util.Map;
  */
 public class t4 {
     public static void main(String[] args) {
-        String s = "abbccd";
+        String s = "abcbcd";
+
 
 
 
@@ -31,5 +32,19 @@ public class t4 {
         System.out.println(map);
         int min = Collections.min(map.values());
         System.out.println(min);
+        StringBuffer stringBuffer = new StringBuffer(s);
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == min) {
+//                map.remove(entry.getKey());
+                System.out.println(entry.getKey());
+                for (int i = 0; i < stringBuffer.length(); i++) {
+                    if (stringBuffer.charAt(i) == entry.getKey()) {
+                        stringBuffer.deleteCharAt(i);
+                    }
+
+                }
+            }
+        }
+        System.out.println(stringBuffer);
     }
 }
