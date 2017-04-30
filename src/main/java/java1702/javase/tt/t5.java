@@ -23,7 +23,7 @@ public class t5 {
 //        System.out.println((int)d2);// 直接去掉小数点后面的数值
         int i1 = (int)d1;
         int i2 = (int)d2;
-        if (Math.abs(d1 - i1) >= 0.5) {
+        if (Math.abs(d1 - i1) >= 0.5) {// Math类的abs()方法取绝对值
             System.out.println(i1);
         }else {
             System.out.println(i1 - 1);
