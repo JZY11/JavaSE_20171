@@ -31,8 +31,9 @@ public class t4 {
         }
         System.out.println(map);
         int min = Collections.min(map.values());
-        System.out.println(min);
-        StringBuffer stringBuffer = new StringBuffer(s);
+//        System.out.println(min);// 以上求得个数最少的字符的个数
+        StringBuffer stringBuffer = new StringBuffer(s);//构造StringBuffer,用当前的字符串s作为参数传进来，目前的结果为abcbcd
+                                                        //与字符串完全一致，因为StringBuffer有一个deleteCharAt方法，字符串没有
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
             if (entry.getValue() == min) {
 //                map.remove(entry.getKey());
