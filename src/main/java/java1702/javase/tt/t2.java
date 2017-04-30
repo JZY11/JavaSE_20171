@@ -19,7 +19,7 @@ public class t2 {
         Hashtable<Character, Integer> hashtable = new Hashtable<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            hashtable.put(c, hashtable.get(c)==null?1:hashtable.get(c) + 1);
+            hashtable.put(c, hashtable.get(i)==null?1:hashtable.get(c) + 1);
         }
         int max = Collections.max(hashtable.values());// Collections工具类的max方法,返回Collection<Integer>
 //        int max = 0;
