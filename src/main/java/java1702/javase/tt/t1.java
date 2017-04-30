@@ -14,13 +14,21 @@ public class t1 {
             s2 = s1;
             s1 = temp;
         }
-        int counter = 0;
-        String[] strings1 = s1.split(",");
-        for (String s : strings1) {
-            if(s2.contains(s)){
+        int counter = 0;// 定义计数器
+//        String[] strings1 = s1.split(",");
+//        for (String s : strings1) {
+//            if(s2.contains(s)){
+//                counter++;
+//            }
+//        }
+//        System.out.println(strings1.length - counter);
+        String[] string1 = s1.split(",");
+        String[] string2 = s2.split(",");
+        for (int i = 0; i < string1.length; i++) {
+            if (string1[string1.length -1 - i].equals(string2[string2.length - 1 - i])) {
                 counter++;
             }
         }
-        System.out.println(strings1.length - counter);
+        System.out.println(string1.length - counter);
     }
 }
