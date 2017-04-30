@@ -21,7 +21,7 @@ public class t3 {
 //        System.out.println(Arrays.toString(strings));
         int[] ints = new int[strings.length];
         for (int i = 0; i < strings.length; i++) {// 对字符串遍历
-            ints[i] = Integer.parseInt(strings[i]);// 往整型数组中传数值
+            ints[i] = Integer.parseInt(strings[i]);// 由字符串数组往整型数组中传数值
         }
         Arrays.sort(ints);
         for (int anInt : ints) {
