@@ -21,7 +21,7 @@ public class t2 {
             char c = s.charAt(i);
             hashtable.put(c, hashtable.get(c)==null?1:hashtable.get(c) + 1);
         }
-        int max = Collections.max(hashtable.values());
+        int max = Collections.max(hashtable.values());// Collections工具类的max方法,返回Collection<Integer>
 //        int max = 0;
 //        for (Map.Entry<Character, Integer> entry : hashtable.entrySet()) {
 //            if(max < entry.getValue()){
