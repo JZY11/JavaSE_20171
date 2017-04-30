@@ -24,16 +24,18 @@ public class tt {
         System.out.println("=============");
         List<Integer> list = new ArrayList<>();
         list.add(123);
-        for (int i = 0; i < ints.length; i++) {
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
+
         }
         for (Integer integer : list) {
             System.out.println(integer);
         }
+        System.out.println("->->->->->");
         Iterator<Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
             Object next =  iterator.next();
-
+            System.out.println(next);
         }
     }
 }
