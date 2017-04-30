@@ -1,6 +1,4 @@
 package java1702.javase.tt;
-
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Hashtable;
 import java.util.Map;
@@ -36,6 +34,11 @@ public class t2 {
             }
 
         }
+        // a->2
+        // b->3
+        // c->3
+        // d->4
+        //  f->4
 
 
 
