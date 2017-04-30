@@ -24,7 +24,10 @@ public class t3 {
             ints[i] = Integer.parseInt(strings[i]);// 往整型数组中传数值
         }
         Arrays.sort(ints);
-        System.out.println(Arrays.toString(ints));
+        for (int anInt : ints) {
+            System.out.print(anInt + " ");
+        }
+//        System.out.println(Arrays.toString(ints));
        
     }
 }
