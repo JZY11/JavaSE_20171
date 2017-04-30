@@ -13,9 +13,25 @@ package java1702.javase.tt;
 */
 public class t5 {
     public static void main(String[] args) {
-        double d1 = -4.5;//-4
+        double d1 = -4.6;//-4
         double d2 = 4.4;// 4
-        System.out.println(Math.round(d1));
-        System.out.println(Math.round(d2));
+//        System.out.println(Math.round(d1));返回最接近参数的 long
+//        System.out.println(Math.round(d2)); 返回最接近参数的 long
+
+
+//        System.out.println((int)d1);
+//        System.out.println((int)d2);// 直接去掉小数点后面的数值
+        int i1 = (int)d1;
+        int i2 = (int)d2;
+        if (Math.abs(d1 - i1) >= 0.5) {
+            System.out.println(i1);
+        }else {
+            System.out.println(i1 - 1);
+        }
+        if (d2 - i2 >= 0.5) {
+            System.out.println(i2 + 1);
+        }else {
+            System.out.println(i2);
+        }
     }
 }
