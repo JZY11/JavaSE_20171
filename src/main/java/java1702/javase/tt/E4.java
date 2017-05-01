@@ -1,4 +1,5 @@
 package java1702.javase.tt;
+
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
@@ -13,19 +14,34 @@ import java.io.RandomAccessFile;
    (2)从文件中读取这5000个整数，并计算其最大值、最小值和平均值并输出结果
  */
 public class E4 {
+    private static final int N = 5000;
+
     public static void main(String[] args) {
-        try {
-            RandomAccessFile raf = new RandomAccessFile("a.txt", "rw");
-            for (int i = 0; i < 5000; i++) {
+        int sum = 0;
+        int min = 9998;
+        int max = 2;
+        try (
+                RandomAccessFile raf = new RandomAccessFile("a.txt", "rw")) {
+            for (int i = 0; i < N; i++) {
                 int r = (int) (Math.random() * 9997) + 2;
                 raf.writeInt(r);
             }
             raf.seek(0);
-            for (int i = 0; i < 5000; i++) {
-                System.out.println(raf.readInt());
+            for (int i = 0; i < N; i++) {
+                int r = raf.readInt();
+                if (r < min) {
+                    min = r;
+                }
+                if (r > max) {
+                    max = r;
+                }
+                sum += r;
+//                System.out.println(raf.readInt());
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println(min + ":" + max);
+        System.out.println(sum / N);
     }
 }
