@@ -21,10 +21,10 @@ public class t3 {
 //        System.out.println(Arrays.toString(strings));
         int[] ints = new int[strings.length];
         for (int i = 0; i < strings.length; i++) {// 对字符串遍历
-            ints[i] = Integer.parseInt(strings[i]);// 由字符串数组往整型数组中传数值
+            ints[i] = Integer.parseInt(strings[i]);// 由字符串数组往整型数组中传数值(将字符串转化为整型)
         }
-        Arrays.sort(ints);
-        for (int anInt : ints) {
+        Arrays.sort(ints);// 由工具类Arrays调用sort()方法进行排序，返回类型为void
+        for (int anInt : ints) {// 对整形数组进行遍历输出
             System.out.print(anInt + " ");
         }
 //        System.out.println(Arrays.toString(ints));

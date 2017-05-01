@@ -2,6 +2,7 @@ package java1702.javase.tt;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.List;
 
 /**
  * Created by zhenya.1291813139.com
@@ -28,7 +29,7 @@ public class E5 {
             }
             raf.seek(0);
             for (int i = 0; i < 10; i++) {// 将20改为10(每次读取两个数)
-                                          // 若只要2、4、6项的话，只需要将10改为6即可
+                                          // 若只要2、4、6项的话，只需要将10改为3即可
                 raf.readInt();// 只让指针往下跳动一次，但不给它输出来
                 try(
                         RandomAccessFile file = new RandomAccessFile("output.txt","rw")
