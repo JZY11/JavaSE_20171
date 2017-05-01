@@ -2,6 +2,9 @@ package java1702.javase.tt;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by zhenya.1291813139.com
@@ -20,6 +23,7 @@ public class E4 {
         int sum = 0;
         int min = 9998;
         int max = 2;
+        List<Integer> list = new ArrayList<>();// (2)
         try (
                 RandomAccessFile raf = new RandomAccessFile("a.txt", "rw")) {
             for (int i = 0; i < N; i++) {
@@ -29,6 +33,7 @@ public class E4 {
             raf.seek(0);
             for (int i = 0; i < N; i++) {
                 int r = raf.readInt();
+                list.add(r);
                 if (r < min) {
                     min = r;
                 }
@@ -42,6 +47,10 @@ public class E4 {
             e.printStackTrace();
         }
         System.out.println(min + ":" + max);
+        Collections.sort(list);// (2)
+        System.out.println(list.get(0) + ":" + list.get(N - 1));// (2)
+        System.out.println("--------------");
+        System.out.println(Collections.min(list) + ":" + Collections.max(list));// (3)
         System.out.println(sum / N);
     }
 }
