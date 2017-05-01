@@ -1,6 +1,5 @@
 package java1702.javase.tt;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
@@ -28,8 +27,17 @@ public class E5 {
                 raf.writeInt(fibonacci(i+1));
             }
             raf.seek(0);
-            for (int i = 0; i < 20; i++) {
-                System.out.println(raf.readInt());
+            for (int i = 0; i < 10; i++) {// 将20改为10(每次读取两个数)
+                                          // 若只要2、4、6项的话，只需要将10改为6即可
+                raf.readInt();// 只让指针往下跳动一次，但不给它输出来
+                try(
+                        RandomAccessFile file = new RandomAccessFile("output.txt","rw")
+                        ){
+                    int r = raf.readInt();
+                    System.out.println(r);
+                    file.writeInt(r);
+                }
+//                System.out.println(raf.readInt());
             }
         } catch (IOException e) {
             e.printStackTrace();
