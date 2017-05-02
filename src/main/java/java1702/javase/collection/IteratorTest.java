@@ -31,7 +31,7 @@ public class IteratorTest {
             String book = (String)it.next();
             System.out.println(book);
             if(book.equals("疯狂Java讲义")){
-                it.remove();
+                it.remove();// 删除元素
                 System.out.println(book);//???
             }
 //            book = "测试字符串";

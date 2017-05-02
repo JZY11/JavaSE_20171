@@ -14,6 +14,12 @@ public class ListTest extends ArrayList {
         strings.add("hello");
         strings.add("whatever");
         strings.add("hello");
+        System.out.println(strings);
+        System.out.println("------------");
+        for (int i = 0; i < strings.size(); i++) {
+            System.out.println(strings.get(i));
+
+        }
         for (String s : strings) {
             System.out.println(s);
         }
