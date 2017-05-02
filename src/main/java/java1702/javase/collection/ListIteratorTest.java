@@ -18,7 +18,11 @@ public class ListIteratorTest {
         ListIterator lit = bookList.listIterator();
         while (lit.hasNext()) {
             System.out.println(lit.next());
-
+            lit.add("======分隔符======");
+        }
+        System.out.println("=======下面开始反向迭代======");
+        while (lit.hasPrevious()) {
+            System.out.println(lit.previous());
         }
     }
 }
