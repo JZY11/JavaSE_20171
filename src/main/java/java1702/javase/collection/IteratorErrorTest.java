@@ -8,6 +8,11 @@ import java.util.Iterator;
  * on 2017/5/2.
  * JavaSE_20171.
  */
+/*
+   Iterator迭代器采用的是快速失败(fail-fast)机制，一旦在迭代过程中检测到集合已经被修改
+   (通常是程序中的其他线程修改)，程序立即引发ConcurrentModificationException异常
+   而不是显示修改后的结果，这样可以避免共享资源而引发的潜在问题
+ */
 public class IteratorErrorTest {
     public static void main(String[] args) {
         Collection books = new HashSet();
