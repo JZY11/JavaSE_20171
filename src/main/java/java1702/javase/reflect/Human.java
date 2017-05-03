@@ -54,4 +54,31 @@ public class Human extends Animals{
         this.name = name;
         this.married = married;
     }
+
+    @Override
+    public void eat(String food) {
+        super.eat(food);
+    }
+    public void study(String course){
+        System.out.println(name + "is now studying" + course);
+    }
+    private void killAnimals(String animal){
+        System.out.println(name + "is now killing" + animal);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isMarried() {
+        return married;
+    }
+
+    public void setMarried(boolean married) {
+        this.married = married;
+    }
 }

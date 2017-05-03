@@ -9,7 +9,7 @@ public class Chinese extends java1702.javase.basic.Human {
     private int i;
 
     public Chinese(int i) {
-        this.i = i;
+        this.i = 1;
     }
     public void m(String s){
         System.out.println(s);
