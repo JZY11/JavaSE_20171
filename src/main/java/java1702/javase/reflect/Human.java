@@ -42,6 +42,16 @@ class Animals{
         this.weight = weight;
     }
 }
-public class Human {
+public class Human extends Animals{
+    public String name;
+    private boolean married;
 
+    public Human() {
+    }
+
+    public Human(int age, double weight, String name, boolean married) {
+        super(age, weight);
+        this.name = name;
+        this.married = married;
+    }
 }
