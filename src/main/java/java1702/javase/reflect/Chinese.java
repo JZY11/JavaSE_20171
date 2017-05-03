@@ -19,6 +19,7 @@ public class Chinese extends java1702.javase.basic.Human {
 class ChineseTest {// Run time 运行时
     public static void main(String[] args) throws ClassNotFoundException {
         Chinese chinese = new Chinese(1);
+        // 实例对象(类对象)获取的三种方法
         Class<Chinese> chineseClass1 = Chinese.class;
         Class chineseClass2 = chinese.getClass();
         Class chineseClass3 = Class.forName("java1702.javase.reflect.Chinese");
