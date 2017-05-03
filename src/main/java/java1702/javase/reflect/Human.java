@@ -1,5 +1,7 @@
 package java1702.javase.reflect;
 
+import java.lang.reflect.Field;
+
 /**
  * Created by zhenya.1291813139.com
  * on 2017/5/3.
@@ -80,5 +82,16 @@ public class Human extends Animals{
 
     public void setMarried(boolean married) {
         this.married = married;
+    }
+}
+class HumanTest{
+    public static void main(String[] args) {
+        Human human = new Human();
+        Class clazz = human.getClass();
+        Field[] fields = clazz.getFields();
+        System.out.println("---getFields()---");
+        for (Field field : fields) {// 进行迭代
+            System.out.println(field.getName());
+        }
     }
 }
