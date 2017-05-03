@@ -34,7 +34,7 @@ public class LoopTest {
         Iterator<Integer> iterator = list.iterator();// 迭代器循环
                                                     //  list对象调用iterator()fangfa
                                                     // 返回Iterator<Integer>
-        while (iterator.hasNext()) {
+        while (iterator.hasNext()) {//itit + Tab
             Integer next = iterator.next();
             System.out.println(next);
         }
