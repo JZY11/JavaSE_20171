@@ -22,7 +22,25 @@ class Animals{
     public void eat(String food){
         System.out.println("eating" + food);
     }
+    private void killHuman(){
+        System.out.println("killed a poor guy...");
+    }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 }
 public class Human {
 
