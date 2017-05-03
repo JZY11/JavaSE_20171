@@ -93,5 +93,10 @@ class HumanTest{
         for (Field field : fields) {// 进行迭代
             System.out.println(field.getName());
         }
+        Field[] declaredFields = clazz.getDeclaredFields();
+        System.out.println("---getDeclaredFields()---");
+        for (Field declaredField : declaredFields) {
+            System.out.println(declaredField.getName());
+        }
     }
 }
