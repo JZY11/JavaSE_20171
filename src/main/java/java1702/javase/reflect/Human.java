@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * Created by zhenya.1291813139.com
@@ -139,11 +140,21 @@ class HumanTest{
                         //但ArrayList有默认认构造方法初始容量为10
                         //可用反射模拟其capacity()方法
                         //反射发生在程序的运行时
+                        //用反射的方式间接获取ArrayList的容量
         List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+        list.add(1);
+        }
         list.add(0);
         System.out.println(list.size());
         Field array = list.getClass().getDeclaredField("elementData");//获取单个域
         array.setAccessible(true);// 要暴力访问(因为不在同一个包而elementData是default修饰的)
         System.out.println(((Object[])array.get(list)).length);// 获取当前list的容量10
+
+
+        Vector<String> vector = new Vector<>();
+        vector.add("hi");
+        System.out.println(vector.size());
+        System.out.println(vector.capacity());
     }
 }
