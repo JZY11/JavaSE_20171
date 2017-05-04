@@ -10,7 +10,7 @@ import java.net.URL;
  */
 public class UserAgentTest {
     public static void main(String[] args) throws IOException {
-        URL url = new URL("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-509708.jpg");
+        URL url = new URL("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-325237.jpg");
         System.out.println(url.openStream().available());//图片数据流的长度
     }
 }
