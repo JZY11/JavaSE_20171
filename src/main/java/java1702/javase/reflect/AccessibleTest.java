@@ -7,6 +7,9 @@ import java.lang.reflect.Field;
  * on 2017/5/4.
  * JavaSE_20171.
  */
+/*
+         反射   关于域
+ */
 public class AccessibleTest {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
         Person person = new Person(29);

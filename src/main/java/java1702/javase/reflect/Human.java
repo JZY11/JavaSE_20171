@@ -1,11 +1,15 @@
 package java1702.javase.reflect;
 
-import java.lang.reflect.Field;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Parameter;
 
 /**
  * Created by zhenya.1291813139.com
  * on 2017/5/3.
  * JavaSE_20171.
+ */
+/*
+     反射   与域有关
  */
 class Animals{
     public int age;
@@ -85,18 +89,40 @@ public class Human extends Animals{
     }
 }
 class HumanTest{
+//    public static void main(String[] args) {
+//        Human human = new Human();
+//        Class clazz = human.getClass();
+//        Field[] fields = clazz.getFields();
+//        System.out.println("---getFields()---");
+//        for (Field field : fields) {// 进行迭代
+//            System.out.println(field.getName());
+//        }
+//        Field[] declaredFields = clazz.getDeclaredFields();
+//        System.out.println("---getDeclaredFields()---");
+//        for (Field declaredField : declaredFields) {
+//            System.out.println(declaredField.getName());
+//        }
+//    }
+
     public static void main(String[] args) {
         Human human = new Human();
         Class clazz = human.getClass();
-        Field[] fields = clazz.getFields();
-        System.out.println("---getFields()---");
-        for (Field field : fields) {// 进行迭代
-            System.out.println(field.getName());
+        Constructor[] constructors = clazz.getConstructors();
+        System.out.println("---clazz.getConstructors()---");
+        for (Constructor constructor : constructors) {
+            System.out.println(constructor.getName());
+            for (Parameter parameter : constructor.getParameters()) {
+                System.out.println("\t" +parameter.getName());
+                System.out.println("\t" +parameter);
+            }
         }
-        Field[] declaredFields = clazz.getDeclaredFields();
-        System.out.println("---getDeclaredFields()---");
-        for (Field declaredField : declaredFields) {
-            System.out.println(declaredField.getName());
+        Constructor[] declaredConstructors = clazz.getDeclaredConstructors();
+        System.out.println("---getDeclaredConstructors()---");
+        for (Constructor declaredConstructor : declaredConstructors) {
+            System.out.println(declaredConstructor.getName());
+            for (Parameter parameter : declaredConstructor.getParameters()) {
+                System.out.println("\t" + parameter);
+            }
         }
     }
 }
