@@ -14,7 +14,7 @@ public class AccessibleTest {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
         Person person = new Person(29);
         Field age = Class.forName("java1702.javase.reflect.Person").getDeclaredField("age");
-        age.setAccessible(true);
+        age.setAccessible(true);//暴力访问(设置访问)
         System.out.println(age.get(person));
         System.out.println("以下设置age");
         age.setInt(person, age.getInt(person) + 1);

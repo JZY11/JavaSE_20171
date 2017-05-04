@@ -1,7 +1,10 @@
 package java1702.javase.reflect;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Parameter;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by zhenya.1291813139.com
@@ -104,7 +107,7 @@ class HumanTest{
 //        }
 //    }
 
-    public static void main(String[] args) throws NoSuchMethodException {
+    public static void main(String[] args) throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException {
         Human human = new Human();
         Class clazz = human.getClass();
         Constructor[] constructors = clazz.getConstructors();
@@ -124,11 +127,23 @@ class HumanTest{
                 System.out.println("\t" + parameter);
             }
         }
-        System.out.println("=============");
+        System.out.println("======以下获取某一个方法=======");
         Constructor constructor = clazz.getDeclaredConstructor(int.class,double.class,String.class,boolean.class);
         System.out.println(constructor.getName());
         for (Parameter parameter : constructor.getParameters()) {
             System.out.println(parameter);
         }
+
+
+        System.out.println("->->->->->ArrayList与Vector不一样，没有capacity()方法->->->->->");
+                        //但ArrayList有默认认构造方法初始容量为10
+                        //可用反射模拟其capacity()方法
+                        //反射发生在程序的运行时
+        List<Integer> list = new ArrayList<>();
+        list.add(0);
+        System.out.println(list.size());
+        Field array = list.getClass().getDeclaredField("elementData");//获取单个域
+        array.setAccessible(true);// 要暴力访问(因为不在同一个包而elementData是default修饰的)
+        System.out.println(((Object[])array.get(list)).length);// 获取当前list的容量10
     }
 }
