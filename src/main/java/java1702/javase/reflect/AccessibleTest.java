@@ -8,14 +8,11 @@ import java.lang.reflect.Field;
  * JavaSE_20171.
  */
 public class AccessibleTest {
-    public static void main(String[] args) throws NoSuchFieldException {
-//        Person person = new Person(29);
-//        System.out.println(person.age);
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
         Person person = new Person(29);
-        Class clazz = person.getClass();
-        Field field = clazz.getDeclaredField("clazz");
-        field.setAccessible(true);
-        System.out.println(field);
+        Field age = Class.forName("java1702.javase.reflect.Person").getDeclaredField("age");
+        age.setAccessible(true);
+        System.out.println(age.get(person));
     }
 }
 class Person{
