@@ -13,6 +13,9 @@ public class AccessibleTest {
         Field age = Class.forName("java1702.javase.reflect.Person").getDeclaredField("age");
         age.setAccessible(true);
         System.out.println(age.get(person));
+        System.out.println("以下设置age");
+        age.setInt(person, age.getInt(person) + 1);
+        System.out.println(age.getInt(person));
     }
 }
 class Person{
