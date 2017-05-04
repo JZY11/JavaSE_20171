@@ -104,7 +104,7 @@ class HumanTest{
 //        }
 //    }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException {
         Human human = new Human();
         Class clazz = human.getClass();
         Constructor[] constructors = clazz.getConstructors();
@@ -123,6 +123,12 @@ class HumanTest{
             for (Parameter parameter : declaredConstructor.getParameters()) {
                 System.out.println("\t" + parameter);
             }
+        }
+        System.out.println("=============");
+        Constructor constructor = clazz.getDeclaredConstructor(int.class,double.class,String.class,boolean.class);
+        System.out.println(constructor.getName());
+        for (Parameter parameter : constructor.getParameters()) {
+            System.out.println(parameter);
         }
     }
 }
