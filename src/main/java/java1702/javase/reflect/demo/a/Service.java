@@ -6,7 +6,7 @@ package java1702.javase.reflect.demo.a;
  * JavaSE_20171.
  */
 /*
-   高层应用类
+       高层应用类   调用底层实现类
  */
 // 强耦合
 public class Service {

@@ -2,7 +2,6 @@ package java1702.javase.reflect.demo.aa;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -13,6 +12,10 @@ import java.util.Properties;
  * Created by zhenya.1291813139.com
  * on 2017/5/5.
  * JavaSE_20171.
+ */
+/*
+       使用这个例子，可以较好得理解反射的一个应用场景。
+       这也是Spring框架的最基本的原理，只是它做的更丰富，安全，健壮。
  */
 // 步骤1：业务类
 public class Service1 {
@@ -54,6 +57,7 @@ class Test1{
         Object service = c.newInstance();
 
         //调用对象的指定方法
+        System.out.println("-------------");
         m.invoke(service);
 
     }
