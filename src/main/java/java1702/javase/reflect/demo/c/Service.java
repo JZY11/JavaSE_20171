@@ -24,10 +24,10 @@ public class Service {
 
         //2 取得对象
         try {
-            Class clazz = Class.forName(className);
-            Method method = clazz.getDeclaredMethod(methodName);
-            Constructor constructor = clazz.getDeclaredConstructor();
-            method.invoke(constructor.newInstance());
+            Class clazz = Class.forName(className);//根据类名创建类对象
+            Method method = clazz.getDeclaredMethod(methodName);//根据方法名称创建方法对象
+            Constructor constructor = clazz.getDeclaredConstructor();//创建构造器对象
+            method.invoke(constructor.newInstance());//根据构造器对象的newInstance()方法来实例object对象
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException | InstantiationException e) {
             e.printStackTrace();
         }

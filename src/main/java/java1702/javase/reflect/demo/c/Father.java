@@ -1,7 +1,5 @@
 package java1702.javase.reflect.demo.c;
 
-import java.util.Arrays;
-
 /**
  * Created by zhenya.1291813139.com
  * on 2017/5/5.
