@@ -2,6 +2,7 @@ package java1702.javase.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
@@ -108,7 +109,7 @@ class HumanTest{
 //        }
 //    }
 
-    public static void main(String[] args) throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException {
+    public static void main(String[] args) throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Human human = new Human();
         Class clazz = human.getClass();
         Constructor[] constructors = clazz.getConstructors();
@@ -134,6 +135,16 @@ class HumanTest{
         for (Parameter parameter : constructor.getParameters()) {
             System.out.println(parameter);
         }
+
+
+
+
+
+        // constructor--> object
+        Human human1 = (Human) constructor.newInstance(20,60,"Tom",false);
+        System.out.println(human1.getName());
+
+
 
 
         System.out.println("->->->->->ArrayList与Vector不一样，没有capacity()方法->->->->->");
