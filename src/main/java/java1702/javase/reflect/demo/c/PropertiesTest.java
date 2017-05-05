@@ -15,6 +15,8 @@ public class PropertiesTest {
         properties.load(new FileReader("src/main/java/java1702/javase/reflect/demo/c/config.properties"));
         System.out.println(properties.getProperty("key"));
         System.out.println(properties.getProperty("k"));
+
+
     }
 
 }
