@@ -1,0 +1,2 @@
+class = java1702.javase.reflect.demo.aa.Service1
+method = doService1
