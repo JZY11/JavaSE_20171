@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <script src="echarts.js"></script>
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            data: ['最高价', '平均价', '最低价', '视频广告', '搜索引擎', '百度', '谷歌', '必应', '其他']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['东城', '西城', '朝阳', '海淀', '丰台', '石景山', '通州']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '最高价',
+                type: 'bar',
+                data: [5600, 5000, 4900, 4800, 4800, 5000, 4000]
+            },
+//            {
+//                name: '邮件营销',
+//                type: 'bar',
+//                stack: '广告',
+//                data: [120, 132, 101, 134, 90, 230, 210]
+//            },
+            {
+                name: '平均总价',
+                type: 'bar',
+                data: [974, 1000, 1200, 980, 1200, 1100, 1300]
+            },
+//            {
+//                name: '视频广告',
+//                type: 'bar',
+//                stack: '广告',
+//                data: [150, 232, 201, 154, 190, 330, 410]
+//            },
+//            {
+//                name: '搜索引擎',
+//                type: 'bar',
+//                data: [862, 1018, 964, 1026, 1679, 1600, 1570],
+//                markLine: {
+//                    lineStyle: {
+//                        normal: {
+//                            type: 'dashed'
+//                        }
+//                    },
+//                    data: [
+//                        [{type: 'min'}, {type: 'max'}]
+//                    ]
+//                }
+//            },
+            {
+                name: '最低价',
+                type: 'bar',
+//                barWidth: 5,
+//                stack: '搜索引擎',
+                data: [330, 732, 701, 734, 1090, 1130, 1120]
+            }
+//            {
+//                name: '谷歌',
+//                type: 'bar',
+//                stack: '搜索引擎',
+//                data: [120, 132, 101, 134, 290, 230, 220]
+//            },
+//            {
+//                name: '必应',
+//                type: 'bar',
+//                stack: '搜索引擎',
+//                data: [60, 72, 71, 74, 190, 130, 110]
+//            },
+//            {
+//                name: '其他',
+//                type: 'bar',
+//                stack: '搜索引擎',
+//                data: [62, 82, 91, 84, 109, 110, 120]
+//            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>
