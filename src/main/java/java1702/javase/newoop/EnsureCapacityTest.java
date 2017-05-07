@@ -13,7 +13,9 @@ import java.util.Vector;
 public class EnsureCapacityTest {
     private static final int N = 10000000;
     public static void main(String[] args) {
-        ArrayList<String> strings = new ArrayList<>();//10
+        ArrayList<String> strings = new ArrayList<>();//若没有下一行代码，则初始容量为10
+                                                      //当加入的元素个数超过10个时就要扩容，所以运行时间会长些
+        strings.ensureCapacity(N);
         Long start = System.currentTimeMillis();
         for (int i = 0; i < 10000000; i++) {
             strings.add("Hello");
