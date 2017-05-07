@@ -8,6 +8,7 @@ package java1702.javase.newoop;
 public class MyLinkedList {
     private Node first;
     private Node last;
+    private int size;
 
     public MyLinkedList() {
     }
@@ -19,6 +20,7 @@ public class MyLinkedList {
         System.out.println(myLinkedList.first());
         System.out.println(myLinkedList.last());
         System.out.println(myLinkedList.get(1));
+        System.out.println(myLinkedList.size());
         myLinkedList.remove(0);
     }
     public String remove(int index){
@@ -41,8 +43,17 @@ public class MyLinkedList {
         return null;
     }
 
+
+    public int size(){
+        return size;
+    }
+
     public String get(int index){
-        Node node = first;
+        if (index < 0 || index >= size) {
+            System.out.println("error");
+            System.exit(0);// 程序退出
+        }
+        Node node = first;//将当前的第一个节点(first)赋值给node
         for (int i = 0; i < index; i++) {
             node = node.next;
         }
@@ -51,14 +62,17 @@ public class MyLinkedList {
 
     public boolean add(String element) {
         if (first == null) {
+            // 先创建一个节点
             Node node = new Node(element, null, null);
             first = node;
             last = node;
         } else {
+            // 先创建一个节点
             Node node = new Node(element, last, null);
-            last.next = node;
+            last.next = node;//当前的下一个(last)指向它(node)
             last = node;
         }
+        size++;
         return true;
     }
 
@@ -70,7 +84,7 @@ public class MyLinkedList {
         return last.element;
     }
 
-    private class Node { // node 节点\ [nəʊd]
+    private class Node { // MyLinkedList的内部类  node 节点\ [nəʊd]
         String element;
         Node prev; // prev previous 以前的\ ['priːvɪəs]
         Node next;
