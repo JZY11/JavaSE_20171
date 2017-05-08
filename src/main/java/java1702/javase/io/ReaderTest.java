@@ -7,11 +7,13 @@ import java.io.*;
  * on 2017/4/18.
  * JavaSE_20171.
  */
+/*
+    Reader:是基于字符的输入流会一个一个字符的读取，且不会乱码，可读取中文
+ */
 public class ReaderTest {
     public static void main(String[] args) throws FileNotFoundException {
-//        Reader reader = null;
 //        try {
-//            reader = new FileReader("test1");
+//            Reader reader = new FileReader("test1");
 //            int i;
 //            while((i = reader.read()) != -1){
 //                System.out.println((char) i);

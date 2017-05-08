@@ -12,6 +12,9 @@ import java.io.InputStream;
 /*
        绝对路径：指定在某一个硬盘上的路径，如：C:/Users/Tony.Jaa/Desktop
        相对路径：在当前项目目录下创建的文本文件，扩展名可写可不写，引入时直接写文本文件名即可
+                 若有目录名的话：目录名/文本文件名ok(包也是目录结构)
+       read()方法：每次都会读取下一个字节
+       只有英文是基于字节来构成的，其他语言则不是
  */
 public class InputStreamTest {
     public static void main(String[] args) {
@@ -25,7 +28,8 @@ public class InputStreamTest {
 //            System.out.println((char)inputStream.read());//输出为强制转换成的字符
             int i;
             while ((i = inputStream.read())!= -1){//循环结束条件  read()返回的是字节
-                System.out.println((char) i);
+                System.out.print((char) i);
+                i = inputStream.read();//隔一个读一个
             }
 
         } catch (IOException e) {
