@@ -14,8 +14,11 @@ package java1702.javase.multiThreading;
  */
 public class Test implements Runnable {
     public static void main(String[] args) {
-        Test test = new Test();
-        Thread thread = new Thread(test);// 有参
+        //进程 process ：一个软件的运行，比较独立
+        //线程 thread  进程内部的一个单独执行的过程
+        Test test = new Test();//创建当前类的实例
+        Thread thread = new Thread(test);// 创建thread类的实例  传入Runnable实例类的对象
+                                        //   接口和抽象类都不能实例化
         thread.start();// 新开一个线程
         System.out.println("test...");
     }
