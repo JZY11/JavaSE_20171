@@ -15,6 +15,7 @@ import java.io.InputStream;
                  若有目录名的话：目录名/文本文件名ok(包也是目录结构)
        read()方法：每次都会读取下一个字节
        只有英文是基于字节来构成的，其他语言则不是
+       输入，输出是相对于内存而言的
  */
 public class InputStreamTest {
     public static void main(String[] args) {
