@@ -9,6 +9,10 @@ import java.io.InputStream;
  * on 2017/5/8.
  * JavaSE_20171.
  */
+/*
+       绝对路径：指定在某一个硬盘上的路径，如：C:/Users/Tony.Jaa/Desktop
+       相对路径：在当前项目目录下创建的文本文件，扩展名可写可不写，引入时直接写文本文件名即可
+ */
 public class InputStreamTest {
     public static void main(String[] args) {
         try {
