@@ -11,14 +11,23 @@ import java.io.Writer;
  */
 public class WriterTest {
     public static void main(String[] args) {
+        Writer writer = null;
         try {
-            Writer writer = new FileWriter("new");
+            writer = new FileWriter("new");
             writer.write(Integer.parseInt("4e00",16));
             writer.write(0x4e01);
             System.out.println(011);
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
