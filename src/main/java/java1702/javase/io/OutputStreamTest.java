@@ -12,6 +12,8 @@ import java.io.OutputStream;
  */
 /*
          写文件
+    OutputStream仍然不可写中文，同样是基于字节一个一个的写入
+    要想写中文可用Writer
  */
 public class OutputStreamTest {
     public static void main(String[] args) {
