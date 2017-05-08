@@ -17,12 +17,21 @@ import java.io.OutputStream;
  */
 public class OutputStreamTest {
     public static void main(String[] args) {
+        OutputStream outputStream = null;
         try {
-            OutputStream outputStream = new FileOutputStream("new");
+            outputStream = new FileOutputStream("new");
             outputStream.write(97);// 97为a的ascii对应值
             outputStream.flush();
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            if (outputStream != null) {
+                try {
+                    outputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

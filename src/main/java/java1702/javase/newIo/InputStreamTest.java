@@ -19,8 +19,10 @@ import java.io.InputStream;
  */
 public class InputStreamTest {
     public static void main(String[] args) {
+        InputStream inputStream = null;
         try {
-            InputStream inputStream = new FileInputStream("C:/Users/Tony.Jaa/Desktop/11.txt");
+//            System.out.println(1 / 0);
+            inputStream = new FileInputStream("C:/Users/Tony.Jaa/Desktop/11.txt");
 //            System.out.println(inputStream.read());//输出字符h对应的ascii值
 //            System.out.println(inputStream.read());//输出字符e对应的ascii值
 //            System.out.println(inputStream.read());//输出字符l对应的ascii值
@@ -28,13 +30,23 @@ public class InputStreamTest {
 //            System.out.println((char)inputStream.read());
 //            System.out.println((char)inputStream.read());//输出为强制转换成的字符
             int i;
-            while ((i = inputStream.read())!= -1){//循环结束条件  read()返回的是字节
+            while ((i = inputStream.read()) != -1) {//循环结束条件  read()返回的是字节
                 System.out.print((char) i);
                 i = inputStream.read();//隔一个读一个
             }
-
+//            System.out.println(1/0);
+//            inputStream.close();// 上面报错，所以关闭不了，应将其放在finally里，好处是：不管try语句有没有异常，都可以执行的到
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (inputStream != null) {
+
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
