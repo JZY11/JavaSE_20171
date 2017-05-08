@@ -1,4 +1,4 @@
-package java1702.javase.io;
+package java1702.javase.newIo;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -28,6 +28,7 @@ public class CheckedExceptionTest {
             randomAccessFile.write(123456);
         } catch (IOException e) {
 //            e.printStackTrace();
+            // 以下为更加积极的处理方式
             System.err.println("file not found");
             test();// recursive 递归  这一行左端有图案显示
         }
