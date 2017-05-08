@@ -37,7 +37,7 @@ public class JianDanTest implements Runnable {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     if (line.contains("data-original")) {
-                        String imageUrl = line.substring(line.indexOf("data-original=\"") + "data-original = \"".length(), line.indexOf("\" width"));
+                        String imageUrl = line.substring(line.indexOf("data-original=\"") + "data-original=\"".length(), line.indexOf("\" width"));
                         if (!imageUrl.startsWith("http")) {
                             imageUrl = "http:" + imageUrl;
                         }
@@ -59,7 +59,8 @@ public class JianDanTest implements Runnable {
             URL url = new URL(imageUrl);
             try (
                     BufferedInputStream in = new BufferedInputStream(url.openStream());
-                    BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("images/" + page + "-" + counter + extension))) {
+                    BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("images/" + page + "-" + counter + extension)))
+            {
                 int i;
                 while ((i = in.read()) != -1) {
                     out.write(i);
