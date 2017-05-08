@@ -11,4 +11,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+//    compile 'group:name:version'
+    compile 'org.jsoup:jsoup:1.10.2'
+    //maven.org 可找各种库
 }
