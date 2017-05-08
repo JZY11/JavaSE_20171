@@ -9,6 +9,7 @@ public class SubThread extends Thread {
     public static void main(String[] args) {
         SubThread subThread = new SubThread();
         subThread.start();
+        System.out.println("test....");
     }
 
     @Override
