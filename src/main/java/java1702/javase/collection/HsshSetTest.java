@@ -8,8 +8,8 @@ import java.util.HashSet;
  * JavaSE_20171.
  */
 /*
-    Set:里的元素无序，元素不可重复
-    HashSet没有get()方法，不可通过该方法取得里面的元素
+    Set:元素不可重复
+    HashSet:无序  但效率比较高  内部是靠HashMap来实现的 没有get()方法，不可通过该方法取得里面的元素,没有类似于索引的概念
     只有通过遍历(iter)的方式，将里面的元素一个一个的都取出
  */
 public class HsshSetTest {
