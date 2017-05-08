@@ -6,7 +6,7 @@ package java1702.javase.multiThreading;
  * JavaSE_20171.
  */
 /*
-    Thread类的join()方法，先运行thread的新开的(start() )的一个线程，运行完后再加入主线程
+    Thread类的join()方法，先运行thread的新启动的(start() )的一个线程，运行完后再加入主线程
  */
 public class JoinTest implements Runnable{
     public static void main(String[] args) {
