@@ -6,7 +6,7 @@ package java1702.javase.multiThreading;
  * JavaSE_20171.
  */
 /*
-        yield让步，让步的为CPU时间片(time slice)
+        yield让步，让步的为CPU时间片(time slice)给其他线程，具体让给谁不一定
  */
 public class YieldTest implements Runnable{
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class YieldTest implements Runnable{
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
-            System.out.println(i + ":" + Thread.currentThread().getName() + "is running...");
+            System.out.println(i + ":" + Thread.currentThread().getName()  + "is running...");
             if (i % 10 == 0) {
                 Thread.yield();
             }
