@@ -15,12 +15,15 @@ import java.io.IOException;
 public class Spider {
     public static void main(String[] args) throws IOException {
         String url = "http://bj.lianjia.com/ershoufang/dongcheng/";
-        Document document = Jsoup.connect(url).get();
-        Elements elements = document.select("li[class = clear]");
+        Document document = Jsoup.connect(url).cookie("lianjia_uuid","5a83ce81-c81e-47ec-b412-e4b6ffba4151").get();
+//        System.out.println(document);//得到整个页面文档(Html)
+        Elements elements = document.select("li[class = clear]");// 得到每个li(每一套房子的信息)
         System.out.println(elements.size());
         for (Element element : elements) {
-            String region = element.select("a[data-el = region]").get(0).text();
+            String region = element.select("a[data-el = region]").first().text();
             System.out.println(region);
+            String totalPrice = element.select("div[class = totalPrice]").first().text();
+            System.out.println("小区：" + region + ";总价：" + totalPrice);
         }
     }
 }
