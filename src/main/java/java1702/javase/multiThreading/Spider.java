@@ -23,7 +23,11 @@ public class Spider {
             String region = element.select("a[data-el = region]").first().text();
             System.out.println(region);
             String totalPrice = element.select("div[class = totalPrice]").first().text();
-            System.out.println("小区：" + region + ";总价：" + totalPrice);
+            String houseInfo = element.select("div[class = houseInfo]").first().text();
+            String unitPrice = element.select("div[class = unitPrice]").first().text();
+            Elements link = element.select("a[class = img]");
+            System.out.println(link);
+            System.out.println("小区：" + region + "户型：" + houseInfo + "总价:"+ totalPrice + "单价:" +unitPrice);
         }
     }
 }
