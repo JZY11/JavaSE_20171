@@ -12,6 +12,7 @@ import java.io.RandomAccessFile;
      EOFException; End of File(到达文件末尾 )
      RandomAccessFile：这个类里有类似于指针的概念，并且指针是依次往下移的，文件写完后指针在最末尾
                        实现了closeable接口也需要关闭
+                       既可以读数据也可以写数据
  */
 public class RandomAccessFileTest {
     public static void main(String[] args) {
