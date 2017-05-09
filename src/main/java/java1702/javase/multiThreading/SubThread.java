@@ -13,7 +13,7 @@ public class SubThread extends Thread {
     }
 
     @Override
-    public void run() {
+    public void run() {// 子类需要主动重写的父类的run()方法
         for (int i = 0; i < 10; i++) {
             System.out.println(i);
         }

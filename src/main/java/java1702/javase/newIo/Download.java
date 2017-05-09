@@ -14,7 +14,7 @@ import java.net.URL;
  */
 /*
      URL    这个类里有一个openStream()方法，返回一个inputStream流
-             可以读这个输入流里的所有的数据以字节的形式，再把它写入一个本地的文件即可完成一张图片的下载
+            可以读这个输入流里的所有的数据以字节的形式，再把它写入一个本地的文件即可完成一张图片的下载
  */
 public class Download {
     private static final String IMAGE_URL = "http://s1.cn.bing.net/th?id=OJ.WQV64AmdYS8GLw&pid=MSNJVFeeds";

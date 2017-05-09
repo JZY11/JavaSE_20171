@@ -16,7 +16,7 @@ public class InputStreamOutputStream {
                 OutputStream outputStream = new FileOutputStream(PATH.concat("Test.java"))
         ) {
             int i;
-            while ((i = inputStream.read()) != -1) {// while括号里里为读取一个字节
+            while ((i = inputStream.read()) != -1) {// while括号里为读取一个字节
                 outputStream.write(i);// 为写入一个字节，即可生成新文件
             }
         } catch (IOException e) {
