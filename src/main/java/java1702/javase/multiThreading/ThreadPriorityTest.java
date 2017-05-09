@@ -6,7 +6,7 @@ package java1702.javase.multiThreading;
  * JavaSE_20171.
  */
 /*
-     Priority 优先级
+     Priority 优先级  范围[1,10]
               MIN_PRIORITY 1
               MAX_PRIORITY 10
               NORMAL_PRIORITY 5
@@ -16,8 +16,8 @@ public class ThreadPriorityTest implements Runnable{
         Thread thread1 = new Thread(new ThreadPriorityTest(),"thread1");
         Thread thread2 = new Thread(new ThreadPriorityTest(),"thread2");
 //        Thread thread3 = new Thread(new ThreadPriorityTest(), "thread3");
-        thread1.setPriority(thread1.MIN_PRIORITY);
-        thread2.setPriority(thread2.MAX_PRIORITY);
+        thread1.setPriority(Thread.MIN_PRIORITY);
+        thread2.setPriority(Thread.MAX_PRIORITY);
 //        thread3.setPriority(thread3.NORMAL_PRIORITY);
         thread1.start();
         thread2.start();
