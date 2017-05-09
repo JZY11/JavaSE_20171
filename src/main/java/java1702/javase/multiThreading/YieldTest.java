@@ -7,7 +7,7 @@ package java1702.javase.multiThreading;
  */
 /*
         yield让步，让步的为CPU时间片(time slice)给其他线程，具体让给谁不一定，也有可能调度器再度调度自己，重新分配给自己
-        并没有进入阻塞状态，只是重新回答了ready状态
+        并没有进入阻塞状态，只是重新回到了ready状态
  */
 public class YieldTest implements Runnable{
     public static void main(String[] args) {

@@ -10,11 +10,13 @@ package java1702.javase.multiThreading;
               MIN_PRIORITY 1
               MAX_PRIORITY 10
               NORMAL_PRIORITY 5
+     Thread.currentThread().getPriority()：返回int整数(返回优先级的数)
+     Thread.currentThread()：返回一个Thread
  */
-public class ThreadPriorityTest implements Runnable{
+public class ThreadPriorityTest implements Runnable {
     public static void main(String[] args) {
-        Thread thread1 = new Thread(new ThreadPriorityTest(),"thread1");
-        Thread thread2 = new Thread(new ThreadPriorityTest(),"thread2");
+        Thread thread1 = new Thread(new ThreadPriorityTest(), "thread1");
+        Thread thread2 = new Thread(new ThreadPriorityTest(), "thread2");
 //        Thread thread3 = new Thread(new ThreadPriorityTest(), "thread3");
         thread1.setPriority(Thread.MIN_PRIORITY);
         thread2.setPriority(Thread.MAX_PRIORITY);
@@ -26,7 +28,9 @@ public class ThreadPriorityTest implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("running thread:" + Thread.currentThread().getName());
-        System.out.println("running priority:" + Thread.currentThread().getPriority());
+        Thread currThread = Thread.currentThread();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(currThread.getName() + ":"+ currThread.getPriority());
+        }
     }
 }
