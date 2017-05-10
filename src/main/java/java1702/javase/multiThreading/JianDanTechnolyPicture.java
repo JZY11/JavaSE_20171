@@ -1,4 +1,4 @@
-package java1702.javase.io;
+package java1702.javase.multiThreading;
 
 import java.io.*;
 import java.net.ConnectException;
@@ -7,26 +7,22 @@ import java.net.URL;
 
 /**
  * Created by zhenya.1291813139.com
- * on 2017/5/8.
+ * on 2017/5/10.
  * JavaSE_20171.
  */
-/*
-          下载多页图片
- */
-public class JianDanTest implements Runnable {
-    //    private static int counter = 0;
-    private static final String PAGE_URL = "http://jandan.net/tag/%E5%A4%A9%E6%96%87/page/";
+public class JianDanTechnolyPicture implements Runnable {
+    private static final String PAGE_URL = "http://jandan.net/tag/%E9%AB%98%E7%A7%91%E6%8A%80/page";
     private int page;
 
-    private JianDanTest(int page) {//有参的构造方法
+    public JianDanTechnolyPicture(int page) {
         this.page = page;
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < 18; i++) {
-            Thread thread = new Thread(new JianDanTest(i + 1));
+        for (int i = 0; i < 38; i++) {
+            Thread thread = new Thread(new JianDanTechnolyPicture(i + 1));
             thread.start();
-            System.out.println("page: " + (i + 1));
+            System.out.println("page:" + (i + 1));
         }
     }
 
@@ -35,18 +31,16 @@ public class JianDanTest implements Runnable {
         int counter = 0;
         try {
             URL url = new URL(PAGE_URL + page);
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()))
-            ) {
+            try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(url.openStream()))) {
                 String line;
-                while ((line = reader.readLine()) != null) {
+                while ((line = bufferedReader.readLine()) != null) {
                     if (line.contains("data-original")) {
-                        String imageUrl = line.substring(line.indexOf("data-original=\"") + "data-original=\"".length(), line.indexOf("\" width"));
-                        if (!imageUrl.startsWith("http")) {
-                            imageUrl = "http:" + imageUrl;
+                        String imgUrl = line.substring(line.indexOf("data-original=\"") + "data-original=\"".length(), line.indexOf("\" width"));
+                        if (!imgUrl.startsWith("http")) {
+                            imgUrl = imgUrl + "http:";
                         }
-                        String extension = imageUrl.substring(imageUrl.lastIndexOf("."));
-                        download(imageUrl, extension, page, ++counter);
-
+                        String extension = imgUrl.substring(imgUrl.lastIndexOf("."));
+                        download(imgUrl, extension, page, ++counter);
                     }
                 }
             } catch (IOException e) {
@@ -57,13 +51,12 @@ public class JianDanTest implements Runnable {
         }
     }
 
-    private static void download(String imageUrl, String extension, int page, int counter) {
+    private static void download(String imgUrl, String extension, int page, int counter) {
         try {
-            URL url = new URL(imageUrl);
+            URL url = new URL(imgUrl);
             try (
                     BufferedInputStream in = new BufferedInputStream(url.openStream());
-                    BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("images/" + page + "-" + counter + extension)))
-            {
+                    BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("images/" + page + "-" + counter + extension))) {
                 int i;
                 while ((i = in.read()) != -1) {
                     out.write(i);
@@ -72,7 +65,7 @@ public class JianDanTest implements Runnable {
             } catch (ConnectException e) {
                 System.out.println("timeout...");
                 //                download(imageUrl, extension);
-                System.out.println(imageUrl);
+                System.out.println(imgUrl);
 
             } catch (IOException e) {
                 e.printStackTrace();
