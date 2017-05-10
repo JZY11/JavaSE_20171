@@ -11,15 +11,17 @@ public class Account {
     public Account(int money) {
         this.money = money;
     }
-
-    synchronized void withdraw(int money){//synchronized:['sɪŋkrənaɪzd](同步)方法修饰符，与线程关系密切
+//同步多个线程只有一个对象，同步起作用，锁的概念，某一线程访问了后，其他线程就不能再访问
+    //一个线程只能访问一个类的一个 synchronized static 方法，对这个类的所有对象都适用
+    synchronized void withdraw(int money) {//(1)synchronized:['sɪŋkrənaɪzd](同步)方法修饰符，加在方法前，与线程关系密切
+                                              //(2):写synchronized block语句块-->synchronized(){},将需要同步的代码放入花括号即可
         System.out.println(Thread.currentThread().getName());
         if (this.money - money < 0) {
             System.out.println("Not enough...");
             return;
         }
         try {
-            Thread.sleep(1000 * 3);
+            Thread.sleep(1000 * 3);//sleep方法不影响同步，但wait能影响
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -33,7 +35,8 @@ public class Account {
 }
 
 class Person implements Runnable {
-    private static Account account = new Account(1000);
+    private static Account account = new Account(1000);//域private static Account account
+                                                                // 上一个类的实例
 
 
     @Override
