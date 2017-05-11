@@ -18,6 +18,12 @@ import java.util.regex.Pattern;
 
         更大的循环(北京所有的地区)，需要定义两个常量AREA ,PAGES,  主方法中外层循环每执行一次下载一个区的
         内层循环每执行一次下载每个区的每一页的
+
+        new InputStreamReader(url.openStream())：中url.openStream()返回InputStream字节流
+                                                  new InputStreamReader(url.openStream())将字节流转化为字符流
+                                                  起到了字节流与字符流之间
+                                                  new InputStreamReader()里的参数为一字节流，，  InputStreamReader为Reader的子类
+                                                  OutputStreamWriter:将输出的字节流转化为字符流
  */
 public class Regex_LianJia_TotalPageSource {
     private static final String[] AREA = {
@@ -61,7 +67,7 @@ public class Regex_LianJia_TotalPageSource {
             98
     };
     private static final String DONGCHENG_URL = "http://bj.lianjia.com/ershoufang/";
-    private static final String IMAGE_REGEXP = "<div class=\"totalPrice><span>\\d+</span>";
+    private static final String IMAGE_REGEXP = "<div class=\"totalPrice><span>(\\d+)</span>";
     private static int counter;
 
     //匹配数字的正则[0-9]或\\d表单个(\\d+表至少一个)

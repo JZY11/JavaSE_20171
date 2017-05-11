@@ -1,4 +1,4 @@
-package java1702.javase.multiThreading;
+package java1702.javase.io;
 
 import java.io.*;
 import java.net.ConnectException;
