@@ -7,6 +7,9 @@ import java.util.Stack;
  * on 2017/5/12.
  * JavaSE_20171.
  */
+/*
+     如何判断一个集合类是否是线程安全的？？-->主要是看该集合类里的方法是否是很多的同步(synchronized)的方法
+ */
 public class ProducerConsumer {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();//将stack对象作为以下两个线程同时拥有的对象,可进行同时操作
