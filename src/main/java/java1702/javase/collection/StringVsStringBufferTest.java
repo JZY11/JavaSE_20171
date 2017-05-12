@@ -1,6 +1,9 @@
 package java1702.javase.collection;
 
-import com.sun.javafx.image.impl.IntArgb;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by zhenya.1291813139.com
