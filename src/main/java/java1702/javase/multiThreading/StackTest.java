@@ -14,9 +14,9 @@ import java.util.Stack;
 public class StackTest {
     public static void main(String[] args) {
         Stack<String> strings = new Stack<>();
-        strings.push("hello");// push 推 往里存数据
-        strings.push("hey");
-        strings.push("test");
+        strings.push("C");// push 推 往里存数据
+        strings.push("B");
+        strings.push("A");
 
         System.out.println(strings.pop());//pop 弹出 取出数据
         System.out.println(strings.pop());
