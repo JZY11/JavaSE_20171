@@ -178,6 +178,15 @@ class HumanTest{
 
 
 
+
+        Class clazz3 = Human.class;
+        System.out.println(clazz3.getModifiers());
+        Field field = clazz3.getDeclaredField("married");
+        System.out.println(field.getModifiers());
+        System.out.println(Modifier.toString(field.getModifiers()));
+
+
+
         System.out.println("->->->->->ArrayList与Vector不一样，没有capacity()方法->->->->->");
                         //但ArrayList有默认认构造方法初始容量为10
                         //可用反射模拟其capacity()方法
