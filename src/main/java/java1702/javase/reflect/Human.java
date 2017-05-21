@@ -20,10 +20,10 @@ class Animals{
     public int age;
     private double weight;
 
-    public Animals() {
+    public Animals() {//无参构造方法
     }
 
-    public Animals(int age, double weight) {
+    public Animals(int age, double weight) {//含有全部参数的有参构造方法
         this.age = age;
         this.weight = weight;
     }
@@ -36,7 +36,7 @@ class Animals{
     private void killHuman(){
         System.out.println("killed a poor guy...");
     }
-
+    // getters and setters
     public int getAge() {
         return age;
     }
@@ -61,14 +61,14 @@ public class Human extends Animals{
     }
 
     public Human(int age, double weight, String name, boolean married) {
-        super(age, weight);
+        super(age, weight);// 调用父类的有参构造方法
         this.name = name;
         this.married = married;
     }
 
     @Override
     public void eat(String food) {
-        super.eat(food);
+        System.out.println(name + "is now eating" + food);
     }
     public void study(String course){
         System.out.println(name + "is now studying" + course);
@@ -89,26 +89,28 @@ public class Human extends Animals{
         return married;
     }
 
-    public void setMarried(boolean married) {
+    public void setMarried(boolean married)  {
         this.married = married;
     }
 }
 class HumanTest{
 //    public static void main(String[] args) {
 //        Human human = new Human();
-//        Class clazz = human.getClass();
-//        Field[] fields = clazz.getFields();
+//        Class clazz = human.getClass();// 可根据Class类的对象clazz,来获取一些类的信息
+//        Field[] fields = clazz.getFields();//java.lang的Class类的实例clazz调用java.lang.reflect的getFields()方法
+                                             //返回Fields[]
 //        System.out.println("---getFields()---");
 //        for (Field field : fields) {// 进行迭代
 //            System.out.println(field.getName());
 //        }
-//        Field[] declaredFields = clazz.getDeclaredFields();
+//        Field[] declaredFields = clazz.getDeclaredFields();//declared:声明
 //        System.out.println("---getDeclaredFields()---");
 //        for (Field declaredField : declaredFields) {
 //            System.out.println(declaredField.getName());
 //        }
 //    }
-
+// getFields()：所有共有的域一直到他所有的父类都会显示出来
+// getDeclaredFields():不管是什么访问限定修饰符，只返回当前类的域
     public static void main(String[] args) throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Human human = new Human();
         Class clazz = human.getClass();

@@ -5,6 +5,9 @@ package java1702.javase.reflect;
  * on 2017/5/3.
  * JavaSE_20171.
  */
+/*
+     Class类   是一个泛型类
+ */
 public class Chinese extends java1702.javase.basic.Human {
     private int i;
 
@@ -24,5 +27,10 @@ class ChineseTest {// Run time 运行时
         Class chineseClass2 = chinese.getClass();
         Class chineseClass3 = Class.forName("java1702.javase.reflect.Chinese");
     }
-
 }
+
+// ArrayList内部capacity的获取就用到了反射
+// 1.编辑  Chinese.java
+// 2.编译  Chinese.class <> byte code
+// 3.运行  将字节码文件转化为当前类的实例(JVM中的java.lang.Class实例对象)
+// 反射   可根据当前类的实例调用某种get方法来获取当前类的一些信息

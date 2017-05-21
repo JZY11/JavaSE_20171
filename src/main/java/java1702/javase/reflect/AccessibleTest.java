@@ -8,6 +8,7 @@ import java.lang.reflect.Field;
  * JavaSE_20171.
  */
 /*
+         Field实际使用场景，获取一个域，修改一个域
          利用反射机制   关于域(获取私有域)
  */
 public class AccessibleTest {
