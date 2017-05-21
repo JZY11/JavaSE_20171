@@ -18,8 +18,10 @@ public class AccessibleTest {
         age.setAccessible(true);//暴力访问(设置访问)
         System.out.println(age.get(person));// get()方法返回指定对象上此 Field 表示的字段的值
         System.out.println("以下设置age");
+//        age.set(person,30);括号里，前为对象后为值
         age.setInt(person, age.getInt(person) + 1);//setInt()将字段的值设置为指定对象上的一个 int 值
         System.out.println(age.getInt(person));
+//        age.getModifiers()可获取域的修饰符即域的数据类型如：int型
         //getint()获取 int 类型或另一个通过扩展转换可以转换为 int 类型的基本类型的静态或实例字段的值
     }
 }
